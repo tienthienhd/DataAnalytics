@@ -1,0 +1,1297 @@
+epochs,batch_size,learning_rate,activation,optimizer,layers,sliding
+100,8,0.0001,relu,adam,"[8, 8]",1
+100,16,0.0001,relu,adam,"[8, 8]",1
+100,32,0.0001,relu,adam,"[8, 8]",1
+100,64,0.0001,relu,adam,"[8, 8]",1
+100,128,0.0001,relu,adam,"[8, 8]",1
+100,256,0.0001,relu,adam,"[8, 8]",1
+100,8,0.0003,relu,adam,"[8, 8]",1
+100,16,0.0003,relu,adam,"[8, 8]",1
+100,32,0.0003,relu,adam,"[8, 8]",1
+100,64,0.0003,relu,adam,"[8, 8]",1
+100,128,0.0003,relu,adam,"[8, 8]",1
+100,256,0.0003,relu,adam,"[8, 8]",1
+100,8,0.001,relu,adam,"[8, 8]",1
+100,16,0.001,relu,adam,"[8, 8]",1
+100,32,0.001,relu,adam,"[8, 8]",1
+100,64,0.001,relu,adam,"[8, 8]",1
+100,128,0.001,relu,adam,"[8, 8]",1
+100,256,0.001,relu,adam,"[8, 8]",1
+100,8,0.003,relu,adam,"[8, 8]",1
+100,16,0.003,relu,adam,"[8, 8]",1
+100,32,0.003,relu,adam,"[8, 8]",1
+100,64,0.003,relu,adam,"[8, 8]",1
+100,128,0.003,relu,adam,"[8, 8]",1
+100,256,0.003,relu,adam,"[8, 8]",1
+100,8,0.01,relu,adam,"[8, 8]",1
+100,16,0.01,relu,adam,"[8, 8]",1
+100,32,0.01,relu,adam,"[8, 8]",1
+100,64,0.01,relu,adam,"[8, 8]",1
+100,128,0.01,relu,adam,"[8, 8]",1
+100,256,0.01,relu,adam,"[8, 8]",1
+100,8,0.03,relu,adam,"[8, 8]",1
+100,16,0.03,relu,adam,"[8, 8]",1
+100,32,0.03,relu,adam,"[8, 8]",1
+100,64,0.03,relu,adam,"[8, 8]",1
+100,128,0.03,relu,adam,"[8, 8]",1
+100,256,0.03,relu,adam,"[8, 8]",1
+100,8,0.1,relu,adam,"[8, 8]",1
+100,16,0.1,relu,adam,"[8, 8]",1
+100,32,0.1,relu,adam,"[8, 8]",1
+100,64,0.1,relu,adam,"[8, 8]",1
+100,128,0.1,relu,adam,"[8, 8]",1
+100,256,0.1,relu,adam,"[8, 8]",1
+100,8,0.3,relu,adam,"[8, 8]",1
+100,16,0.3,relu,adam,"[8, 8]",1
+100,32,0.3,relu,adam,"[8, 8]",1
+100,64,0.3,relu,adam,"[8, 8]",1
+100,128,0.3,relu,adam,"[8, 8]",1
+100,256,0.3,relu,adam,"[8, 8]",1
+100,8,0.0001,sigmoid,adam,"[8, 8]",1
+100,16,0.0001,sigmoid,adam,"[8, 8]",1
+100,32,0.0001,sigmoid,adam,"[8, 8]",1
+100,64,0.0001,sigmoid,adam,"[8, 8]",1
+100,128,0.0001,sigmoid,adam,"[8, 8]",1
+100,256,0.0001,sigmoid,adam,"[8, 8]",1
+100,8,0.0003,sigmoid,adam,"[8, 8]",1
+100,16,0.0003,sigmoid,adam,"[8, 8]",1
+100,32,0.0003,sigmoid,adam,"[8, 8]",1
+100,64,0.0003,sigmoid,adam,"[8, 8]",1
+100,128,0.0003,sigmoid,adam,"[8, 8]",1
+100,256,0.0003,sigmoid,adam,"[8, 8]",1
+100,8,0.001,sigmoid,adam,"[8, 8]",1
+100,16,0.001,sigmoid,adam,"[8, 8]",1
+100,32,0.001,sigmoid,adam,"[8, 8]",1
+100,64,0.001,sigmoid,adam,"[8, 8]",1
+100,128,0.001,sigmoid,adam,"[8, 8]",1
+100,256,0.001,sigmoid,adam,"[8, 8]",1
+100,8,0.003,sigmoid,adam,"[8, 8]",1
+100,16,0.003,sigmoid,adam,"[8, 8]",1
+100,32,0.003,sigmoid,adam,"[8, 8]",1
+100,64,0.003,sigmoid,adam,"[8, 8]",1
+100,128,0.003,sigmoid,adam,"[8, 8]",1
+100,256,0.003,sigmoid,adam,"[8, 8]",1
+100,8,0.01,sigmoid,adam,"[8, 8]",1
+100,16,0.01,sigmoid,adam,"[8, 8]",1
+100,32,0.01,sigmoid,adam,"[8, 8]",1
+100,64,0.01,sigmoid,adam,"[8, 8]",1
+100,128,0.01,sigmoid,adam,"[8, 8]",1
+100,256,0.01,sigmoid,adam,"[8, 8]",1
+100,8,0.03,sigmoid,adam,"[8, 8]",1
+100,16,0.03,sigmoid,adam,"[8, 8]",1
+100,32,0.03,sigmoid,adam,"[8, 8]",1
+100,64,0.03,sigmoid,adam,"[8, 8]",1
+100,128,0.03,sigmoid,adam,"[8, 8]",1
+100,256,0.03,sigmoid,adam,"[8, 8]",1
+100,8,0.1,sigmoid,adam,"[8, 8]",1
+100,16,0.1,sigmoid,adam,"[8, 8]",1
+100,32,0.1,sigmoid,adam,"[8, 8]",1
+100,64,0.1,sigmoid,adam,"[8, 8]",1
+100,128,0.1,sigmoid,adam,"[8, 8]",1
+100,256,0.1,sigmoid,adam,"[8, 8]",1
+100,8,0.3,sigmoid,adam,"[8, 8]",1
+100,16,0.3,sigmoid,adam,"[8, 8]",1
+100,32,0.3,sigmoid,adam,"[8, 8]",1
+100,64,0.3,sigmoid,adam,"[8, 8]",1
+100,128,0.3,sigmoid,adam,"[8, 8]",1
+100,256,0.3,sigmoid,adam,"[8, 8]",1
+100,8,0.0001,tanh,adam,"[8, 8]",1
+100,16,0.0001,tanh,adam,"[8, 8]",1
+100,32,0.0001,tanh,adam,"[8, 8]",1
+100,64,0.0001,tanh,adam,"[8, 8]",1
+100,128,0.0001,tanh,adam,"[8, 8]",1
+100,256,0.0001,tanh,adam,"[8, 8]",1
+100,8,0.0003,tanh,adam,"[8, 8]",1
+100,16,0.0003,tanh,adam,"[8, 8]",1
+100,32,0.0003,tanh,adam,"[8, 8]",1
+100,64,0.0003,tanh,adam,"[8, 8]",1
+100,128,0.0003,tanh,adam,"[8, 8]",1
+100,256,0.0003,tanh,adam,"[8, 8]",1
+100,8,0.001,tanh,adam,"[8, 8]",1
+100,16,0.001,tanh,adam,"[8, 8]",1
+100,32,0.001,tanh,adam,"[8, 8]",1
+100,64,0.001,tanh,adam,"[8, 8]",1
+100,128,0.001,tanh,adam,"[8, 8]",1
+100,256,0.001,tanh,adam,"[8, 8]",1
+100,8,0.003,tanh,adam,"[8, 8]",1
+100,16,0.003,tanh,adam,"[8, 8]",1
+100,32,0.003,tanh,adam,"[8, 8]",1
+100,64,0.003,tanh,adam,"[8, 8]",1
+100,128,0.003,tanh,adam,"[8, 8]",1
+100,256,0.003,tanh,adam,"[8, 8]",1
+100,8,0.01,tanh,adam,"[8, 8]",1
+100,16,0.01,tanh,adam,"[8, 8]",1
+100,32,0.01,tanh,adam,"[8, 8]",1
+100,64,0.01,tanh,adam,"[8, 8]",1
+100,128,0.01,tanh,adam,"[8, 8]",1
+100,256,0.01,tanh,adam,"[8, 8]",1
+100,8,0.03,tanh,adam,"[8, 8]",1
+100,16,0.03,tanh,adam,"[8, 8]",1
+100,32,0.03,tanh,adam,"[8, 8]",1
+100,64,0.03,tanh,adam,"[8, 8]",1
+100,128,0.03,tanh,adam,"[8, 8]",1
+100,256,0.03,tanh,adam,"[8, 8]",1
+100,8,0.1,tanh,adam,"[8, 8]",1
+100,16,0.1,tanh,adam,"[8, 8]",1
+100,32,0.1,tanh,adam,"[8, 8]",1
+100,64,0.1,tanh,adam,"[8, 8]",1
+100,128,0.1,tanh,adam,"[8, 8]",1
+100,256,0.1,tanh,adam,"[8, 8]",1
+100,8,0.3,tanh,adam,"[8, 8]",1
+100,16,0.3,tanh,adam,"[8, 8]",1
+100,32,0.3,tanh,adam,"[8, 8]",1
+100,64,0.3,tanh,adam,"[8, 8]",1
+100,128,0.3,tanh,adam,"[8, 8]",1
+100,256,0.3,tanh,adam,"[8, 8]",1
+100,8,0.0001,relu,rmsprop,"[8, 8]",1
+100,16,0.0001,relu,rmsprop,"[8, 8]",1
+100,32,0.0001,relu,rmsprop,"[8, 8]",1
+100,64,0.0001,relu,rmsprop,"[8, 8]",1
+100,128,0.0001,relu,rmsprop,"[8, 8]",1
+100,256,0.0001,relu,rmsprop,"[8, 8]",1
+100,8,0.0003,relu,rmsprop,"[8, 8]",1
+100,16,0.0003,relu,rmsprop,"[8, 8]",1
+100,32,0.0003,relu,rmsprop,"[8, 8]",1
+100,64,0.0003,relu,rmsprop,"[8, 8]",1
+100,128,0.0003,relu,rmsprop,"[8, 8]",1
+100,256,0.0003,relu,rmsprop,"[8, 8]",1
+100,8,0.001,relu,rmsprop,"[8, 8]",1
+100,16,0.001,relu,rmsprop,"[8, 8]",1
+100,32,0.001,relu,rmsprop,"[8, 8]",1
+100,64,0.001,relu,rmsprop,"[8, 8]",1
+100,128,0.001,relu,rmsprop,"[8, 8]",1
+100,256,0.001,relu,rmsprop,"[8, 8]",1
+100,8,0.003,relu,rmsprop,"[8, 8]",1
+100,16,0.003,relu,rmsprop,"[8, 8]",1
+100,32,0.003,relu,rmsprop,"[8, 8]",1
+100,64,0.003,relu,rmsprop,"[8, 8]",1
+100,128,0.003,relu,rmsprop,"[8, 8]",1
+100,256,0.003,relu,rmsprop,"[8, 8]",1
+100,8,0.01,relu,rmsprop,"[8, 8]",1
+100,16,0.01,relu,rmsprop,"[8, 8]",1
+100,32,0.01,relu,rmsprop,"[8, 8]",1
+100,64,0.01,relu,rmsprop,"[8, 8]",1
+100,128,0.01,relu,rmsprop,"[8, 8]",1
+100,256,0.01,relu,rmsprop,"[8, 8]",1
+100,8,0.03,relu,rmsprop,"[8, 8]",1
+100,16,0.03,relu,rmsprop,"[8, 8]",1
+100,32,0.03,relu,rmsprop,"[8, 8]",1
+100,64,0.03,relu,rmsprop,"[8, 8]",1
+100,128,0.03,relu,rmsprop,"[8, 8]",1
+100,256,0.03,relu,rmsprop,"[8, 8]",1
+100,8,0.1,relu,rmsprop,"[8, 8]",1
+100,16,0.1,relu,rmsprop,"[8, 8]",1
+100,32,0.1,relu,rmsprop,"[8, 8]",1
+100,64,0.1,relu,rmsprop,"[8, 8]",1
+100,128,0.1,relu,rmsprop,"[8, 8]",1
+100,256,0.1,relu,rmsprop,"[8, 8]",1
+100,8,0.3,relu,rmsprop,"[8, 8]",1
+100,16,0.3,relu,rmsprop,"[8, 8]",1
+100,32,0.3,relu,rmsprop,"[8, 8]",1
+100,64,0.3,relu,rmsprop,"[8, 8]",1
+100,128,0.3,relu,rmsprop,"[8, 8]",1
+100,256,0.3,relu,rmsprop,"[8, 8]",1
+100,8,0.0001,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.0001,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.0001,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.0001,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.0001,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.0001,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.0003,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.0003,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.0003,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.0003,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.0003,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.0003,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.001,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.001,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.001,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.001,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.001,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.001,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.003,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.003,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.003,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.003,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.003,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.003,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.01,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.01,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.01,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.01,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.01,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.01,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.03,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.03,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.03,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.03,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.03,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.03,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.1,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.1,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.1,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.1,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.1,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.1,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.3,sigmoid,rmsprop,"[8, 8]",1
+100,16,0.3,sigmoid,rmsprop,"[8, 8]",1
+100,32,0.3,sigmoid,rmsprop,"[8, 8]",1
+100,64,0.3,sigmoid,rmsprop,"[8, 8]",1
+100,128,0.3,sigmoid,rmsprop,"[8, 8]",1
+100,256,0.3,sigmoid,rmsprop,"[8, 8]",1
+100,8,0.0001,tanh,rmsprop,"[8, 8]",1
+100,16,0.0001,tanh,rmsprop,"[8, 8]",1
+100,32,0.0001,tanh,rmsprop,"[8, 8]",1
+100,64,0.0001,tanh,rmsprop,"[8, 8]",1
+100,128,0.0001,tanh,rmsprop,"[8, 8]",1
+100,256,0.0001,tanh,rmsprop,"[8, 8]",1
+100,8,0.0003,tanh,rmsprop,"[8, 8]",1
+100,16,0.0003,tanh,rmsprop,"[8, 8]",1
+100,32,0.0003,tanh,rmsprop,"[8, 8]",1
+100,64,0.0003,tanh,rmsprop,"[8, 8]",1
+100,128,0.0003,tanh,rmsprop,"[8, 8]",1
+100,256,0.0003,tanh,rmsprop,"[8, 8]",1
+100,8,0.001,tanh,rmsprop,"[8, 8]",1
+100,16,0.001,tanh,rmsprop,"[8, 8]",1
+100,32,0.001,tanh,rmsprop,"[8, 8]",1
+100,64,0.001,tanh,rmsprop,"[8, 8]",1
+100,128,0.001,tanh,rmsprop,"[8, 8]",1
+100,256,0.001,tanh,rmsprop,"[8, 8]",1
+100,8,0.003,tanh,rmsprop,"[8, 8]",1
+100,16,0.003,tanh,rmsprop,"[8, 8]",1
+100,32,0.003,tanh,rmsprop,"[8, 8]",1
+100,64,0.003,tanh,rmsprop,"[8, 8]",1
+100,128,0.003,tanh,rmsprop,"[8, 8]",1
+100,256,0.003,tanh,rmsprop,"[8, 8]",1
+100,8,0.01,tanh,rmsprop,"[8, 8]",1
+100,16,0.01,tanh,rmsprop,"[8, 8]",1
+100,32,0.01,tanh,rmsprop,"[8, 8]",1
+100,64,0.01,tanh,rmsprop,"[8, 8]",1
+100,128,0.01,tanh,rmsprop,"[8, 8]",1
+100,256,0.01,tanh,rmsprop,"[8, 8]",1
+100,8,0.03,tanh,rmsprop,"[8, 8]",1
+100,16,0.03,tanh,rmsprop,"[8, 8]",1
+100,32,0.03,tanh,rmsprop,"[8, 8]",1
+100,64,0.03,tanh,rmsprop,"[8, 8]",1
+100,128,0.03,tanh,rmsprop,"[8, 8]",1
+100,256,0.03,tanh,rmsprop,"[8, 8]",1
+100,8,0.1,tanh,rmsprop,"[8, 8]",1
+100,16,0.1,tanh,rmsprop,"[8, 8]",1
+100,32,0.1,tanh,rmsprop,"[8, 8]",1
+100,64,0.1,tanh,rmsprop,"[8, 8]",1
+100,128,0.1,tanh,rmsprop,"[8, 8]",1
+100,256,0.1,tanh,rmsprop,"[8, 8]",1
+100,8,0.3,tanh,rmsprop,"[8, 8]",1
+100,16,0.3,tanh,rmsprop,"[8, 8]",1
+100,32,0.3,tanh,rmsprop,"[8, 8]",1
+100,64,0.3,tanh,rmsprop,"[8, 8]",1
+100,128,0.3,tanh,rmsprop,"[8, 8]",1
+100,256,0.3,tanh,rmsprop,"[8, 8]",1
+100,8,0.0001,relu,adagrad,"[8, 8]",1
+100,16,0.0001,relu,adagrad,"[8, 8]",1
+100,32,0.0001,relu,adagrad,"[8, 8]",1
+100,64,0.0001,relu,adagrad,"[8, 8]",1
+100,128,0.0001,relu,adagrad,"[8, 8]",1
+100,256,0.0001,relu,adagrad,"[8, 8]",1
+100,8,0.0003,relu,adagrad,"[8, 8]",1
+100,16,0.0003,relu,adagrad,"[8, 8]",1
+100,32,0.0003,relu,adagrad,"[8, 8]",1
+100,64,0.0003,relu,adagrad,"[8, 8]",1
+100,128,0.0003,relu,adagrad,"[8, 8]",1
+100,256,0.0003,relu,adagrad,"[8, 8]",1
+100,8,0.001,relu,adagrad,"[8, 8]",1
+100,16,0.001,relu,adagrad,"[8, 8]",1
+100,32,0.001,relu,adagrad,"[8, 8]",1
+100,64,0.001,relu,adagrad,"[8, 8]",1
+100,128,0.001,relu,adagrad,"[8, 8]",1
+100,256,0.001,relu,adagrad,"[8, 8]",1
+100,8,0.003,relu,adagrad,"[8, 8]",1
+100,16,0.003,relu,adagrad,"[8, 8]",1
+100,32,0.003,relu,adagrad,"[8, 8]",1
+100,64,0.003,relu,adagrad,"[8, 8]",1
+100,128,0.003,relu,adagrad,"[8, 8]",1
+100,256,0.003,relu,adagrad,"[8, 8]",1
+100,8,0.01,relu,adagrad,"[8, 8]",1
+100,16,0.01,relu,adagrad,"[8, 8]",1
+100,32,0.01,relu,adagrad,"[8, 8]",1
+100,64,0.01,relu,adagrad,"[8, 8]",1
+100,128,0.01,relu,adagrad,"[8, 8]",1
+100,256,0.01,relu,adagrad,"[8, 8]",1
+100,8,0.03,relu,adagrad,"[8, 8]",1
+100,16,0.03,relu,adagrad,"[8, 8]",1
+100,32,0.03,relu,adagrad,"[8, 8]",1
+100,64,0.03,relu,adagrad,"[8, 8]",1
+100,128,0.03,relu,adagrad,"[8, 8]",1
+100,256,0.03,relu,adagrad,"[8, 8]",1
+100,8,0.1,relu,adagrad,"[8, 8]",1
+100,16,0.1,relu,adagrad,"[8, 8]",1
+100,32,0.1,relu,adagrad,"[8, 8]",1
+100,64,0.1,relu,adagrad,"[8, 8]",1
+100,128,0.1,relu,adagrad,"[8, 8]",1
+100,256,0.1,relu,adagrad,"[8, 8]",1
+100,8,0.3,relu,adagrad,"[8, 8]",1
+100,16,0.3,relu,adagrad,"[8, 8]",1
+100,32,0.3,relu,adagrad,"[8, 8]",1
+100,64,0.3,relu,adagrad,"[8, 8]",1
+100,128,0.3,relu,adagrad,"[8, 8]",1
+100,256,0.3,relu,adagrad,"[8, 8]",1
+100,8,0.0001,sigmoid,adagrad,"[8, 8]",1
+100,16,0.0001,sigmoid,adagrad,"[8, 8]",1
+100,32,0.0001,sigmoid,adagrad,"[8, 8]",1
+100,64,0.0001,sigmoid,adagrad,"[8, 8]",1
+100,128,0.0001,sigmoid,adagrad,"[8, 8]",1
+100,256,0.0001,sigmoid,adagrad,"[8, 8]",1
+100,8,0.0003,sigmoid,adagrad,"[8, 8]",1
+100,16,0.0003,sigmoid,adagrad,"[8, 8]",1
+100,32,0.0003,sigmoid,adagrad,"[8, 8]",1
+100,64,0.0003,sigmoid,adagrad,"[8, 8]",1
+100,128,0.0003,sigmoid,adagrad,"[8, 8]",1
+100,256,0.0003,sigmoid,adagrad,"[8, 8]",1
+100,8,0.001,sigmoid,adagrad,"[8, 8]",1
+100,16,0.001,sigmoid,adagrad,"[8, 8]",1
+100,32,0.001,sigmoid,adagrad,"[8, 8]",1
+100,64,0.001,sigmoid,adagrad,"[8, 8]",1
+100,128,0.001,sigmoid,adagrad,"[8, 8]",1
+100,256,0.001,sigmoid,adagrad,"[8, 8]",1
+100,8,0.003,sigmoid,adagrad,"[8, 8]",1
+100,16,0.003,sigmoid,adagrad,"[8, 8]",1
+100,32,0.003,sigmoid,adagrad,"[8, 8]",1
+100,64,0.003,sigmoid,adagrad,"[8, 8]",1
+100,128,0.003,sigmoid,adagrad,"[8, 8]",1
+100,256,0.003,sigmoid,adagrad,"[8, 8]",1
+100,8,0.01,sigmoid,adagrad,"[8, 8]",1
+100,16,0.01,sigmoid,adagrad,"[8, 8]",1
+100,32,0.01,sigmoid,adagrad,"[8, 8]",1
+100,64,0.01,sigmoid,adagrad,"[8, 8]",1
+100,128,0.01,sigmoid,adagrad,"[8, 8]",1
+100,256,0.01,sigmoid,adagrad,"[8, 8]",1
+100,8,0.03,sigmoid,adagrad,"[8, 8]",1
+100,16,0.03,sigmoid,adagrad,"[8, 8]",1
+100,32,0.03,sigmoid,adagrad,"[8, 8]",1
+100,64,0.03,sigmoid,adagrad,"[8, 8]",1
+100,128,0.03,sigmoid,adagrad,"[8, 8]",1
+100,256,0.03,sigmoid,adagrad,"[8, 8]",1
+100,8,0.1,sigmoid,adagrad,"[8, 8]",1
+100,16,0.1,sigmoid,adagrad,"[8, 8]",1
+100,32,0.1,sigmoid,adagrad,"[8, 8]",1
+100,64,0.1,sigmoid,adagrad,"[8, 8]",1
+100,128,0.1,sigmoid,adagrad,"[8, 8]",1
+100,256,0.1,sigmoid,adagrad,"[8, 8]",1
+100,8,0.3,sigmoid,adagrad,"[8, 8]",1
+100,16,0.3,sigmoid,adagrad,"[8, 8]",1
+100,32,0.3,sigmoid,adagrad,"[8, 8]",1
+100,64,0.3,sigmoid,adagrad,"[8, 8]",1
+100,128,0.3,sigmoid,adagrad,"[8, 8]",1
+100,256,0.3,sigmoid,adagrad,"[8, 8]",1
+100,8,0.0001,tanh,adagrad,"[8, 8]",1
+100,16,0.0001,tanh,adagrad,"[8, 8]",1
+100,32,0.0001,tanh,adagrad,"[8, 8]",1
+100,64,0.0001,tanh,adagrad,"[8, 8]",1
+100,128,0.0001,tanh,adagrad,"[8, 8]",1
+100,256,0.0001,tanh,adagrad,"[8, 8]",1
+100,8,0.0003,tanh,adagrad,"[8, 8]",1
+100,16,0.0003,tanh,adagrad,"[8, 8]",1
+100,32,0.0003,tanh,adagrad,"[8, 8]",1
+100,64,0.0003,tanh,adagrad,"[8, 8]",1
+100,128,0.0003,tanh,adagrad,"[8, 8]",1
+100,256,0.0003,tanh,adagrad,"[8, 8]",1
+100,8,0.001,tanh,adagrad,"[8, 8]",1
+100,16,0.001,tanh,adagrad,"[8, 8]",1
+100,32,0.001,tanh,adagrad,"[8, 8]",1
+100,64,0.001,tanh,adagrad,"[8, 8]",1
+100,128,0.001,tanh,adagrad,"[8, 8]",1
+100,256,0.001,tanh,adagrad,"[8, 8]",1
+100,8,0.003,tanh,adagrad,"[8, 8]",1
+100,16,0.003,tanh,adagrad,"[8, 8]",1
+100,32,0.003,tanh,adagrad,"[8, 8]",1
+100,64,0.003,tanh,adagrad,"[8, 8]",1
+100,128,0.003,tanh,adagrad,"[8, 8]",1
+100,256,0.003,tanh,adagrad,"[8, 8]",1
+100,8,0.01,tanh,adagrad,"[8, 8]",1
+100,16,0.01,tanh,adagrad,"[8, 8]",1
+100,32,0.01,tanh,adagrad,"[8, 8]",1
+100,64,0.01,tanh,adagrad,"[8, 8]",1
+100,128,0.01,tanh,adagrad,"[8, 8]",1
+100,256,0.01,tanh,adagrad,"[8, 8]",1
+100,8,0.03,tanh,adagrad,"[8, 8]",1
+100,16,0.03,tanh,adagrad,"[8, 8]",1
+100,32,0.03,tanh,adagrad,"[8, 8]",1
+100,64,0.03,tanh,adagrad,"[8, 8]",1
+100,128,0.03,tanh,adagrad,"[8, 8]",1
+100,256,0.03,tanh,adagrad,"[8, 8]",1
+100,8,0.1,tanh,adagrad,"[8, 8]",1
+100,16,0.1,tanh,adagrad,"[8, 8]",1
+100,32,0.1,tanh,adagrad,"[8, 8]",1
+100,64,0.1,tanh,adagrad,"[8, 8]",1
+100,128,0.1,tanh,adagrad,"[8, 8]",1
+100,256,0.1,tanh,adagrad,"[8, 8]",1
+100,8,0.3,tanh,adagrad,"[8, 8]",1
+100,16,0.3,tanh,adagrad,"[8, 8]",1
+100,32,0.3,tanh,adagrad,"[8, 8]",1
+100,64,0.3,tanh,adagrad,"[8, 8]",1
+100,128,0.3,tanh,adagrad,"[8, 8]",1
+100,256,0.3,tanh,adagrad,"[8, 8]",1
+100,8,0.0001,relu,adam,"[2, 2]",1
+100,16,0.0001,relu,adam,"[2, 2]",1
+100,32,0.0001,relu,adam,"[2, 2]",1
+100,64,0.0001,relu,adam,"[2, 2]",1
+100,128,0.0001,relu,adam,"[2, 2]",1
+100,256,0.0001,relu,adam,"[2, 2]",1
+100,8,0.0003,relu,adam,"[2, 2]",1
+100,16,0.0003,relu,adam,"[2, 2]",1
+100,32,0.0003,relu,adam,"[2, 2]",1
+100,64,0.0003,relu,adam,"[2, 2]",1
+100,128,0.0003,relu,adam,"[2, 2]",1
+100,256,0.0003,relu,adam,"[2, 2]",1
+100,8,0.001,relu,adam,"[2, 2]",1
+100,16,0.001,relu,adam,"[2, 2]",1
+100,32,0.001,relu,adam,"[2, 2]",1
+100,64,0.001,relu,adam,"[2, 2]",1
+100,128,0.001,relu,adam,"[2, 2]",1
+100,256,0.001,relu,adam,"[2, 2]",1
+100,8,0.003,relu,adam,"[2, 2]",1
+100,16,0.003,relu,adam,"[2, 2]",1
+100,32,0.003,relu,adam,"[2, 2]",1
+100,64,0.003,relu,adam,"[2, 2]",1
+100,128,0.003,relu,adam,"[2, 2]",1
+100,256,0.003,relu,adam,"[2, 2]",1
+100,8,0.01,relu,adam,"[2, 2]",1
+100,16,0.01,relu,adam,"[2, 2]",1
+100,32,0.01,relu,adam,"[2, 2]",1
+100,64,0.01,relu,adam,"[2, 2]",1
+100,128,0.01,relu,adam,"[2, 2]",1
+100,256,0.01,relu,adam,"[2, 2]",1
+100,8,0.03,relu,adam,"[2, 2]",1
+100,16,0.03,relu,adam,"[2, 2]",1
+100,32,0.03,relu,adam,"[2, 2]",1
+100,64,0.03,relu,adam,"[2, 2]",1
+100,128,0.03,relu,adam,"[2, 2]",1
+100,256,0.03,relu,adam,"[2, 2]",1
+100,8,0.1,relu,adam,"[2, 2]",1
+100,16,0.1,relu,adam,"[2, 2]",1
+100,32,0.1,relu,adam,"[2, 2]",1
+100,64,0.1,relu,adam,"[2, 2]",1
+100,128,0.1,relu,adam,"[2, 2]",1
+100,256,0.1,relu,adam,"[2, 2]",1
+100,8,0.3,relu,adam,"[2, 2]",1
+100,16,0.3,relu,adam,"[2, 2]",1
+100,32,0.3,relu,adam,"[2, 2]",1
+100,64,0.3,relu,adam,"[2, 2]",1
+100,128,0.3,relu,adam,"[2, 2]",1
+100,256,0.3,relu,adam,"[2, 2]",1
+100,8,0.0001,sigmoid,adam,"[2, 2]",1
+100,16,0.0001,sigmoid,adam,"[2, 2]",1
+100,32,0.0001,sigmoid,adam,"[2, 2]",1
+100,64,0.0001,sigmoid,adam,"[2, 2]",1
+100,128,0.0001,sigmoid,adam,"[2, 2]",1
+100,256,0.0001,sigmoid,adam,"[2, 2]",1
+100,8,0.0003,sigmoid,adam,"[2, 2]",1
+100,16,0.0003,sigmoid,adam,"[2, 2]",1
+100,32,0.0003,sigmoid,adam,"[2, 2]",1
+100,64,0.0003,sigmoid,adam,"[2, 2]",1
+100,128,0.0003,sigmoid,adam,"[2, 2]",1
+100,256,0.0003,sigmoid,adam,"[2, 2]",1
+100,8,0.001,sigmoid,adam,"[2, 2]",1
+100,16,0.001,sigmoid,adam,"[2, 2]",1
+100,32,0.001,sigmoid,adam,"[2, 2]",1
+100,64,0.001,sigmoid,adam,"[2, 2]",1
+100,128,0.001,sigmoid,adam,"[2, 2]",1
+100,256,0.001,sigmoid,adam,"[2, 2]",1
+100,8,0.003,sigmoid,adam,"[2, 2]",1
+100,16,0.003,sigmoid,adam,"[2, 2]",1
+100,32,0.003,sigmoid,adam,"[2, 2]",1
+100,64,0.003,sigmoid,adam,"[2, 2]",1
+100,128,0.003,sigmoid,adam,"[2, 2]",1
+100,256,0.003,sigmoid,adam,"[2, 2]",1
+100,8,0.01,sigmoid,adam,"[2, 2]",1
+100,16,0.01,sigmoid,adam,"[2, 2]",1
+100,32,0.01,sigmoid,adam,"[2, 2]",1
+100,64,0.01,sigmoid,adam,"[2, 2]",1
+100,128,0.01,sigmoid,adam,"[2, 2]",1
+100,256,0.01,sigmoid,adam,"[2, 2]",1
+100,8,0.03,sigmoid,adam,"[2, 2]",1
+100,16,0.03,sigmoid,adam,"[2, 2]",1
+100,32,0.03,sigmoid,adam,"[2, 2]",1
+100,64,0.03,sigmoid,adam,"[2, 2]",1
+100,128,0.03,sigmoid,adam,"[2, 2]",1
+100,256,0.03,sigmoid,adam,"[2, 2]",1
+100,8,0.1,sigmoid,adam,"[2, 2]",1
+100,16,0.1,sigmoid,adam,"[2, 2]",1
+100,32,0.1,sigmoid,adam,"[2, 2]",1
+100,64,0.1,sigmoid,adam,"[2, 2]",1
+100,128,0.1,sigmoid,adam,"[2, 2]",1
+100,256,0.1,sigmoid,adam,"[2, 2]",1
+100,8,0.3,sigmoid,adam,"[2, 2]",1
+100,16,0.3,sigmoid,adam,"[2, 2]",1
+100,32,0.3,sigmoid,adam,"[2, 2]",1
+100,64,0.3,sigmoid,adam,"[2, 2]",1
+100,128,0.3,sigmoid,adam,"[2, 2]",1
+100,256,0.3,sigmoid,adam,"[2, 2]",1
+100,8,0.0001,tanh,adam,"[2, 2]",1
+100,16,0.0001,tanh,adam,"[2, 2]",1
+100,32,0.0001,tanh,adam,"[2, 2]",1
+100,64,0.0001,tanh,adam,"[2, 2]",1
+100,128,0.0001,tanh,adam,"[2, 2]",1
+100,256,0.0001,tanh,adam,"[2, 2]",1
+100,8,0.0003,tanh,adam,"[2, 2]",1
+100,16,0.0003,tanh,adam,"[2, 2]",1
+100,32,0.0003,tanh,adam,"[2, 2]",1
+100,64,0.0003,tanh,adam,"[2, 2]",1
+100,128,0.0003,tanh,adam,"[2, 2]",1
+100,256,0.0003,tanh,adam,"[2, 2]",1
+100,8,0.001,tanh,adam,"[2, 2]",1
+100,16,0.001,tanh,adam,"[2, 2]",1
+100,32,0.001,tanh,adam,"[2, 2]",1
+100,64,0.001,tanh,adam,"[2, 2]",1
+100,128,0.001,tanh,adam,"[2, 2]",1
+100,256,0.001,tanh,adam,"[2, 2]",1
+100,8,0.003,tanh,adam,"[2, 2]",1
+100,16,0.003,tanh,adam,"[2, 2]",1
+100,32,0.003,tanh,adam,"[2, 2]",1
+100,64,0.003,tanh,adam,"[2, 2]",1
+100,128,0.003,tanh,adam,"[2, 2]",1
+100,256,0.003,tanh,adam,"[2, 2]",1
+100,8,0.01,tanh,adam,"[2, 2]",1
+100,16,0.01,tanh,adam,"[2, 2]",1
+100,32,0.01,tanh,adam,"[2, 2]",1
+100,64,0.01,tanh,adam,"[2, 2]",1
+100,128,0.01,tanh,adam,"[2, 2]",1
+100,256,0.01,tanh,adam,"[2, 2]",1
+100,8,0.03,tanh,adam,"[2, 2]",1
+100,16,0.03,tanh,adam,"[2, 2]",1
+100,32,0.03,tanh,adam,"[2, 2]",1
+100,64,0.03,tanh,adam,"[2, 2]",1
+100,128,0.03,tanh,adam,"[2, 2]",1
+100,256,0.03,tanh,adam,"[2, 2]",1
+100,8,0.1,tanh,adam,"[2, 2]",1
+100,16,0.1,tanh,adam,"[2, 2]",1
+100,32,0.1,tanh,adam,"[2, 2]",1
+100,64,0.1,tanh,adam,"[2, 2]",1
+100,128,0.1,tanh,adam,"[2, 2]",1
+100,256,0.1,tanh,adam,"[2, 2]",1
+100,8,0.3,tanh,adam,"[2, 2]",1
+100,16,0.3,tanh,adam,"[2, 2]",1
+100,32,0.3,tanh,adam,"[2, 2]",1
+100,64,0.3,tanh,adam,"[2, 2]",1
+100,128,0.3,tanh,adam,"[2, 2]",1
+100,256,0.3,tanh,adam,"[2, 2]",1
+100,8,0.0001,relu,rmsprop,"[2, 2]",1
+100,16,0.0001,relu,rmsprop,"[2, 2]",1
+100,32,0.0001,relu,rmsprop,"[2, 2]",1
+100,64,0.0001,relu,rmsprop,"[2, 2]",1
+100,128,0.0001,relu,rmsprop,"[2, 2]",1
+100,256,0.0001,relu,rmsprop,"[2, 2]",1
+100,8,0.0003,relu,rmsprop,"[2, 2]",1
+100,16,0.0003,relu,rmsprop,"[2, 2]",1
+100,32,0.0003,relu,rmsprop,"[2, 2]",1
+100,64,0.0003,relu,rmsprop,"[2, 2]",1
+100,128,0.0003,relu,rmsprop,"[2, 2]",1
+100,256,0.0003,relu,rmsprop,"[2, 2]",1
+100,8,0.001,relu,rmsprop,"[2, 2]",1
+100,16,0.001,relu,rmsprop,"[2, 2]",1
+100,32,0.001,relu,rmsprop,"[2, 2]",1
+100,64,0.001,relu,rmsprop,"[2, 2]",1
+100,128,0.001,relu,rmsprop,"[2, 2]",1
+100,256,0.001,relu,rmsprop,"[2, 2]",1
+100,8,0.003,relu,rmsprop,"[2, 2]",1
+100,16,0.003,relu,rmsprop,"[2, 2]",1
+100,32,0.003,relu,rmsprop,"[2, 2]",1
+100,64,0.003,relu,rmsprop,"[2, 2]",1
+100,128,0.003,relu,rmsprop,"[2, 2]",1
+100,256,0.003,relu,rmsprop,"[2, 2]",1
+100,8,0.01,relu,rmsprop,"[2, 2]",1
+100,16,0.01,relu,rmsprop,"[2, 2]",1
+100,32,0.01,relu,rmsprop,"[2, 2]",1
+100,64,0.01,relu,rmsprop,"[2, 2]",1
+100,128,0.01,relu,rmsprop,"[2, 2]",1
+100,256,0.01,relu,rmsprop,"[2, 2]",1
+100,8,0.03,relu,rmsprop,"[2, 2]",1
+100,16,0.03,relu,rmsprop,"[2, 2]",1
+100,32,0.03,relu,rmsprop,"[2, 2]",1
+100,64,0.03,relu,rmsprop,"[2, 2]",1
+100,128,0.03,relu,rmsprop,"[2, 2]",1
+100,256,0.03,relu,rmsprop,"[2, 2]",1
+100,8,0.1,relu,rmsprop,"[2, 2]",1
+100,16,0.1,relu,rmsprop,"[2, 2]",1
+100,32,0.1,relu,rmsprop,"[2, 2]",1
+100,64,0.1,relu,rmsprop,"[2, 2]",1
+100,128,0.1,relu,rmsprop,"[2, 2]",1
+100,256,0.1,relu,rmsprop,"[2, 2]",1
+100,8,0.3,relu,rmsprop,"[2, 2]",1
+100,16,0.3,relu,rmsprop,"[2, 2]",1
+100,32,0.3,relu,rmsprop,"[2, 2]",1
+100,64,0.3,relu,rmsprop,"[2, 2]",1
+100,128,0.3,relu,rmsprop,"[2, 2]",1
+100,256,0.3,relu,rmsprop,"[2, 2]",1
+100,8,0.0001,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.0001,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.0001,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.0001,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.0001,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.0001,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.0003,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.0003,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.0003,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.0003,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.0003,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.0003,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.001,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.001,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.001,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.001,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.001,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.001,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.003,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.003,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.003,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.003,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.003,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.003,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.01,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.01,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.01,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.01,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.01,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.01,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.03,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.03,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.03,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.03,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.03,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.03,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.1,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.1,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.1,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.1,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.1,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.1,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.3,sigmoid,rmsprop,"[2, 2]",1
+100,16,0.3,sigmoid,rmsprop,"[2, 2]",1
+100,32,0.3,sigmoid,rmsprop,"[2, 2]",1
+100,64,0.3,sigmoid,rmsprop,"[2, 2]",1
+100,128,0.3,sigmoid,rmsprop,"[2, 2]",1
+100,256,0.3,sigmoid,rmsprop,"[2, 2]",1
+100,8,0.0001,tanh,rmsprop,"[2, 2]",1
+100,16,0.0001,tanh,rmsprop,"[2, 2]",1
+100,32,0.0001,tanh,rmsprop,"[2, 2]",1
+100,64,0.0001,tanh,rmsprop,"[2, 2]",1
+100,128,0.0001,tanh,rmsprop,"[2, 2]",1
+100,256,0.0001,tanh,rmsprop,"[2, 2]",1
+100,8,0.0003,tanh,rmsprop,"[2, 2]",1
+100,16,0.0003,tanh,rmsprop,"[2, 2]",1
+100,32,0.0003,tanh,rmsprop,"[2, 2]",1
+100,64,0.0003,tanh,rmsprop,"[2, 2]",1
+100,128,0.0003,tanh,rmsprop,"[2, 2]",1
+100,256,0.0003,tanh,rmsprop,"[2, 2]",1
+100,8,0.001,tanh,rmsprop,"[2, 2]",1
+100,16,0.001,tanh,rmsprop,"[2, 2]",1
+100,32,0.001,tanh,rmsprop,"[2, 2]",1
+100,64,0.001,tanh,rmsprop,"[2, 2]",1
+100,128,0.001,tanh,rmsprop,"[2, 2]",1
+100,256,0.001,tanh,rmsprop,"[2, 2]",1
+100,8,0.003,tanh,rmsprop,"[2, 2]",1
+100,16,0.003,tanh,rmsprop,"[2, 2]",1
+100,32,0.003,tanh,rmsprop,"[2, 2]",1
+100,64,0.003,tanh,rmsprop,"[2, 2]",1
+100,128,0.003,tanh,rmsprop,"[2, 2]",1
+100,256,0.003,tanh,rmsprop,"[2, 2]",1
+100,8,0.01,tanh,rmsprop,"[2, 2]",1
+100,16,0.01,tanh,rmsprop,"[2, 2]",1
+100,32,0.01,tanh,rmsprop,"[2, 2]",1
+100,64,0.01,tanh,rmsprop,"[2, 2]",1
+100,128,0.01,tanh,rmsprop,"[2, 2]",1
+100,256,0.01,tanh,rmsprop,"[2, 2]",1
+100,8,0.03,tanh,rmsprop,"[2, 2]",1
+100,16,0.03,tanh,rmsprop,"[2, 2]",1
+100,32,0.03,tanh,rmsprop,"[2, 2]",1
+100,64,0.03,tanh,rmsprop,"[2, 2]",1
+100,128,0.03,tanh,rmsprop,"[2, 2]",1
+100,256,0.03,tanh,rmsprop,"[2, 2]",1
+100,8,0.1,tanh,rmsprop,"[2, 2]",1
+100,16,0.1,tanh,rmsprop,"[2, 2]",1
+100,32,0.1,tanh,rmsprop,"[2, 2]",1
+100,64,0.1,tanh,rmsprop,"[2, 2]",1
+100,128,0.1,tanh,rmsprop,"[2, 2]",1
+100,256,0.1,tanh,rmsprop,"[2, 2]",1
+100,8,0.3,tanh,rmsprop,"[2, 2]",1
+100,16,0.3,tanh,rmsprop,"[2, 2]",1
+100,32,0.3,tanh,rmsprop,"[2, 2]",1
+100,64,0.3,tanh,rmsprop,"[2, 2]",1
+100,128,0.3,tanh,rmsprop,"[2, 2]",1
+100,256,0.3,tanh,rmsprop,"[2, 2]",1
+100,8,0.0001,relu,adagrad,"[2, 2]",1
+100,16,0.0001,relu,adagrad,"[2, 2]",1
+100,32,0.0001,relu,adagrad,"[2, 2]",1
+100,64,0.0001,relu,adagrad,"[2, 2]",1
+100,128,0.0001,relu,adagrad,"[2, 2]",1
+100,256,0.0001,relu,adagrad,"[2, 2]",1
+100,8,0.0003,relu,adagrad,"[2, 2]",1
+100,16,0.0003,relu,adagrad,"[2, 2]",1
+100,32,0.0003,relu,adagrad,"[2, 2]",1
+100,64,0.0003,relu,adagrad,"[2, 2]",1
+100,128,0.0003,relu,adagrad,"[2, 2]",1
+100,256,0.0003,relu,adagrad,"[2, 2]",1
+100,8,0.001,relu,adagrad,"[2, 2]",1
+100,16,0.001,relu,adagrad,"[2, 2]",1
+100,32,0.001,relu,adagrad,"[2, 2]",1
+100,64,0.001,relu,adagrad,"[2, 2]",1
+100,128,0.001,relu,adagrad,"[2, 2]",1
+100,256,0.001,relu,adagrad,"[2, 2]",1
+100,8,0.003,relu,adagrad,"[2, 2]",1
+100,16,0.003,relu,adagrad,"[2, 2]",1
+100,32,0.003,relu,adagrad,"[2, 2]",1
+100,64,0.003,relu,adagrad,"[2, 2]",1
+100,128,0.003,relu,adagrad,"[2, 2]",1
+100,256,0.003,relu,adagrad,"[2, 2]",1
+100,8,0.01,relu,adagrad,"[2, 2]",1
+100,16,0.01,relu,adagrad,"[2, 2]",1
+100,32,0.01,relu,adagrad,"[2, 2]",1
+100,64,0.01,relu,adagrad,"[2, 2]",1
+100,128,0.01,relu,adagrad,"[2, 2]",1
+100,256,0.01,relu,adagrad,"[2, 2]",1
+100,8,0.03,relu,adagrad,"[2, 2]",1
+100,16,0.03,relu,adagrad,"[2, 2]",1
+100,32,0.03,relu,adagrad,"[2, 2]",1
+100,64,0.03,relu,adagrad,"[2, 2]",1
+100,128,0.03,relu,adagrad,"[2, 2]",1
+100,256,0.03,relu,adagrad,"[2, 2]",1
+100,8,0.1,relu,adagrad,"[2, 2]",1
+100,16,0.1,relu,adagrad,"[2, 2]",1
+100,32,0.1,relu,adagrad,"[2, 2]",1
+100,64,0.1,relu,adagrad,"[2, 2]",1
+100,128,0.1,relu,adagrad,"[2, 2]",1
+100,256,0.1,relu,adagrad,"[2, 2]",1
+100,8,0.3,relu,adagrad,"[2, 2]",1
+100,16,0.3,relu,adagrad,"[2, 2]",1
+100,32,0.3,relu,adagrad,"[2, 2]",1
+100,64,0.3,relu,adagrad,"[2, 2]",1
+100,128,0.3,relu,adagrad,"[2, 2]",1
+100,256,0.3,relu,adagrad,"[2, 2]",1
+100,8,0.0001,sigmoid,adagrad,"[2, 2]",1
+100,16,0.0001,sigmoid,adagrad,"[2, 2]",1
+100,32,0.0001,sigmoid,adagrad,"[2, 2]",1
+100,64,0.0001,sigmoid,adagrad,"[2, 2]",1
+100,128,0.0001,sigmoid,adagrad,"[2, 2]",1
+100,256,0.0001,sigmoid,adagrad,"[2, 2]",1
+100,8,0.0003,sigmoid,adagrad,"[2, 2]",1
+100,16,0.0003,sigmoid,adagrad,"[2, 2]",1
+100,32,0.0003,sigmoid,adagrad,"[2, 2]",1
+100,64,0.0003,sigmoid,adagrad,"[2, 2]",1
+100,128,0.0003,sigmoid,adagrad,"[2, 2]",1
+100,256,0.0003,sigmoid,adagrad,"[2, 2]",1
+100,8,0.001,sigmoid,adagrad,"[2, 2]",1
+100,16,0.001,sigmoid,adagrad,"[2, 2]",1
+100,32,0.001,sigmoid,adagrad,"[2, 2]",1
+100,64,0.001,sigmoid,adagrad,"[2, 2]",1
+100,128,0.001,sigmoid,adagrad,"[2, 2]",1
+100,256,0.001,sigmoid,adagrad,"[2, 2]",1
+100,8,0.003,sigmoid,adagrad,"[2, 2]",1
+100,16,0.003,sigmoid,adagrad,"[2, 2]",1
+100,32,0.003,sigmoid,adagrad,"[2, 2]",1
+100,64,0.003,sigmoid,adagrad,"[2, 2]",1
+100,128,0.003,sigmoid,adagrad,"[2, 2]",1
+100,256,0.003,sigmoid,adagrad,"[2, 2]",1
+100,8,0.01,sigmoid,adagrad,"[2, 2]",1
+100,16,0.01,sigmoid,adagrad,"[2, 2]",1
+100,32,0.01,sigmoid,adagrad,"[2, 2]",1
+100,64,0.01,sigmoid,adagrad,"[2, 2]",1
+100,128,0.01,sigmoid,adagrad,"[2, 2]",1
+100,256,0.01,sigmoid,adagrad,"[2, 2]",1
+100,8,0.03,sigmoid,adagrad,"[2, 2]",1
+100,16,0.03,sigmoid,adagrad,"[2, 2]",1
+100,32,0.03,sigmoid,adagrad,"[2, 2]",1
+100,64,0.03,sigmoid,adagrad,"[2, 2]",1
+100,128,0.03,sigmoid,adagrad,"[2, 2]",1
+100,256,0.03,sigmoid,adagrad,"[2, 2]",1
+100,8,0.1,sigmoid,adagrad,"[2, 2]",1
+100,16,0.1,sigmoid,adagrad,"[2, 2]",1
+100,32,0.1,sigmoid,adagrad,"[2, 2]",1
+100,64,0.1,sigmoid,adagrad,"[2, 2]",1
+100,128,0.1,sigmoid,adagrad,"[2, 2]",1
+100,256,0.1,sigmoid,adagrad,"[2, 2]",1
+100,8,0.3,sigmoid,adagrad,"[2, 2]",1
+100,16,0.3,sigmoid,adagrad,"[2, 2]",1
+100,32,0.3,sigmoid,adagrad,"[2, 2]",1
+100,64,0.3,sigmoid,adagrad,"[2, 2]",1
+100,128,0.3,sigmoid,adagrad,"[2, 2]",1
+100,256,0.3,sigmoid,adagrad,"[2, 2]",1
+100,8,0.0001,tanh,adagrad,"[2, 2]",1
+100,16,0.0001,tanh,adagrad,"[2, 2]",1
+100,32,0.0001,tanh,adagrad,"[2, 2]",1
+100,64,0.0001,tanh,adagrad,"[2, 2]",1
+100,128,0.0001,tanh,adagrad,"[2, 2]",1
+100,256,0.0001,tanh,adagrad,"[2, 2]",1
+100,8,0.0003,tanh,adagrad,"[2, 2]",1
+100,16,0.0003,tanh,adagrad,"[2, 2]",1
+100,32,0.0003,tanh,adagrad,"[2, 2]",1
+100,64,0.0003,tanh,adagrad,"[2, 2]",1
+100,128,0.0003,tanh,adagrad,"[2, 2]",1
+100,256,0.0003,tanh,adagrad,"[2, 2]",1
+100,8,0.001,tanh,adagrad,"[2, 2]",1
+100,16,0.001,tanh,adagrad,"[2, 2]",1
+100,32,0.001,tanh,adagrad,"[2, 2]",1
+100,64,0.001,tanh,adagrad,"[2, 2]",1
+100,128,0.001,tanh,adagrad,"[2, 2]",1
+100,256,0.001,tanh,adagrad,"[2, 2]",1
+100,8,0.003,tanh,adagrad,"[2, 2]",1
+100,16,0.003,tanh,adagrad,"[2, 2]",1
+100,32,0.003,tanh,adagrad,"[2, 2]",1
+100,64,0.003,tanh,adagrad,"[2, 2]",1
+100,128,0.003,tanh,adagrad,"[2, 2]",1
+100,256,0.003,tanh,adagrad,"[2, 2]",1
+100,8,0.01,tanh,adagrad,"[2, 2]",1
+100,16,0.01,tanh,adagrad,"[2, 2]",1
+100,32,0.01,tanh,adagrad,"[2, 2]",1
+100,64,0.01,tanh,adagrad,"[2, 2]",1
+100,128,0.01,tanh,adagrad,"[2, 2]",1
+100,256,0.01,tanh,adagrad,"[2, 2]",1
+100,8,0.03,tanh,adagrad,"[2, 2]",1
+100,16,0.03,tanh,adagrad,"[2, 2]",1
+100,32,0.03,tanh,adagrad,"[2, 2]",1
+100,64,0.03,tanh,adagrad,"[2, 2]",1
+100,128,0.03,tanh,adagrad,"[2, 2]",1
+100,256,0.03,tanh,adagrad,"[2, 2]",1
+100,8,0.1,tanh,adagrad,"[2, 2]",1
+100,16,0.1,tanh,adagrad,"[2, 2]",1
+100,32,0.1,tanh,adagrad,"[2, 2]",1
+100,64,0.1,tanh,adagrad,"[2, 2]",1
+100,128,0.1,tanh,adagrad,"[2, 2]",1
+100,256,0.1,tanh,adagrad,"[2, 2]",1
+100,8,0.3,tanh,adagrad,"[2, 2]",1
+100,16,0.3,tanh,adagrad,"[2, 2]",1
+100,32,0.3,tanh,adagrad,"[2, 2]",1
+100,64,0.3,tanh,adagrad,"[2, 2]",1
+100,128,0.3,tanh,adagrad,"[2, 2]",1
+100,256,0.3,tanh,adagrad,"[2, 2]",1
+100,8,0.0001,relu,adam,"[3, 3, 3]",1
+100,16,0.0001,relu,adam,"[3, 3, 3]",1
+100,32,0.0001,relu,adam,"[3, 3, 3]",1
+100,64,0.0001,relu,adam,"[3, 3, 3]",1
+100,128,0.0001,relu,adam,"[3, 3, 3]",1
+100,256,0.0001,relu,adam,"[3, 3, 3]",1
+100,8,0.0003,relu,adam,"[3, 3, 3]",1
+100,16,0.0003,relu,adam,"[3, 3, 3]",1
+100,32,0.0003,relu,adam,"[3, 3, 3]",1
+100,64,0.0003,relu,adam,"[3, 3, 3]",1
+100,128,0.0003,relu,adam,"[3, 3, 3]",1
+100,256,0.0003,relu,adam,"[3, 3, 3]",1
+100,8,0.001,relu,adam,"[3, 3, 3]",1
+100,16,0.001,relu,adam,"[3, 3, 3]",1
+100,32,0.001,relu,adam,"[3, 3, 3]",1
+100,64,0.001,relu,adam,"[3, 3, 3]",1
+100,128,0.001,relu,adam,"[3, 3, 3]",1
+100,256,0.001,relu,adam,"[3, 3, 3]",1
+100,8,0.003,relu,adam,"[3, 3, 3]",1
+100,16,0.003,relu,adam,"[3, 3, 3]",1
+100,32,0.003,relu,adam,"[3, 3, 3]",1
+100,64,0.003,relu,adam,"[3, 3, 3]",1
+100,128,0.003,relu,adam,"[3, 3, 3]",1
+100,256,0.003,relu,adam,"[3, 3, 3]",1
+100,8,0.01,relu,adam,"[3, 3, 3]",1
+100,16,0.01,relu,adam,"[3, 3, 3]",1
+100,32,0.01,relu,adam,"[3, 3, 3]",1
+100,64,0.01,relu,adam,"[3, 3, 3]",1
+100,128,0.01,relu,adam,"[3, 3, 3]",1
+100,256,0.01,relu,adam,"[3, 3, 3]",1
+100,8,0.03,relu,adam,"[3, 3, 3]",1
+100,16,0.03,relu,adam,"[3, 3, 3]",1
+100,32,0.03,relu,adam,"[3, 3, 3]",1
+100,64,0.03,relu,adam,"[3, 3, 3]",1
+100,128,0.03,relu,adam,"[3, 3, 3]",1
+100,256,0.03,relu,adam,"[3, 3, 3]",1
+100,8,0.1,relu,adam,"[3, 3, 3]",1
+100,16,0.1,relu,adam,"[3, 3, 3]",1
+100,32,0.1,relu,adam,"[3, 3, 3]",1
+100,64,0.1,relu,adam,"[3, 3, 3]",1
+100,128,0.1,relu,adam,"[3, 3, 3]",1
+100,256,0.1,relu,adam,"[3, 3, 3]",1
+100,8,0.3,relu,adam,"[3, 3, 3]",1
+100,16,0.3,relu,adam,"[3, 3, 3]",1
+100,32,0.3,relu,adam,"[3, 3, 3]",1
+100,64,0.3,relu,adam,"[3, 3, 3]",1
+100,128,0.3,relu,adam,"[3, 3, 3]",1
+100,256,0.3,relu,adam,"[3, 3, 3]",1
+100,8,0.0001,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.0001,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.0001,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.0001,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.0001,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.0001,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.0003,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.0003,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.0003,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.0003,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.0003,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.0003,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.001,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.001,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.001,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.001,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.001,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.001,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.003,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.003,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.003,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.003,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.003,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.003,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.01,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.01,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.01,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.01,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.01,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.01,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.03,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.03,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.03,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.03,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.03,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.03,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.1,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.1,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.1,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.1,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.1,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.1,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.3,sigmoid,adam,"[3, 3, 3]",1
+100,16,0.3,sigmoid,adam,"[3, 3, 3]",1
+100,32,0.3,sigmoid,adam,"[3, 3, 3]",1
+100,64,0.3,sigmoid,adam,"[3, 3, 3]",1
+100,128,0.3,sigmoid,adam,"[3, 3, 3]",1
+100,256,0.3,sigmoid,adam,"[3, 3, 3]",1
+100,8,0.0001,tanh,adam,"[3, 3, 3]",1
+100,16,0.0001,tanh,adam,"[3, 3, 3]",1
+100,32,0.0001,tanh,adam,"[3, 3, 3]",1
+100,64,0.0001,tanh,adam,"[3, 3, 3]",1
+100,128,0.0001,tanh,adam,"[3, 3, 3]",1
+100,256,0.0001,tanh,adam,"[3, 3, 3]",1
+100,8,0.0003,tanh,adam,"[3, 3, 3]",1
+100,16,0.0003,tanh,adam,"[3, 3, 3]",1
+100,32,0.0003,tanh,adam,"[3, 3, 3]",1
+100,64,0.0003,tanh,adam,"[3, 3, 3]",1
+100,128,0.0003,tanh,adam,"[3, 3, 3]",1
+100,256,0.0003,tanh,adam,"[3, 3, 3]",1
+100,8,0.001,tanh,adam,"[3, 3, 3]",1
+100,16,0.001,tanh,adam,"[3, 3, 3]",1
+100,32,0.001,tanh,adam,"[3, 3, 3]",1
+100,64,0.001,tanh,adam,"[3, 3, 3]",1
+100,128,0.001,tanh,adam,"[3, 3, 3]",1
+100,256,0.001,tanh,adam,"[3, 3, 3]",1
+100,8,0.003,tanh,adam,"[3, 3, 3]",1
+100,16,0.003,tanh,adam,"[3, 3, 3]",1
+100,32,0.003,tanh,adam,"[3, 3, 3]",1
+100,64,0.003,tanh,adam,"[3, 3, 3]",1
+100,128,0.003,tanh,adam,"[3, 3, 3]",1
+100,256,0.003,tanh,adam,"[3, 3, 3]",1
+100,8,0.01,tanh,adam,"[3, 3, 3]",1
+100,16,0.01,tanh,adam,"[3, 3, 3]",1
+100,32,0.01,tanh,adam,"[3, 3, 3]",1
+100,64,0.01,tanh,adam,"[3, 3, 3]",1
+100,128,0.01,tanh,adam,"[3, 3, 3]",1
+100,256,0.01,tanh,adam,"[3, 3, 3]",1
+100,8,0.03,tanh,adam,"[3, 3, 3]",1
+100,16,0.03,tanh,adam,"[3, 3, 3]",1
+100,32,0.03,tanh,adam,"[3, 3, 3]",1
+100,64,0.03,tanh,adam,"[3, 3, 3]",1
+100,128,0.03,tanh,adam,"[3, 3, 3]",1
+100,256,0.03,tanh,adam,"[3, 3, 3]",1
+100,8,0.1,tanh,adam,"[3, 3, 3]",1
+100,16,0.1,tanh,adam,"[3, 3, 3]",1
+100,32,0.1,tanh,adam,"[3, 3, 3]",1
+100,64,0.1,tanh,adam,"[3, 3, 3]",1
+100,128,0.1,tanh,adam,"[3, 3, 3]",1
+100,256,0.1,tanh,adam,"[3, 3, 3]",1
+100,8,0.3,tanh,adam,"[3, 3, 3]",1
+100,16,0.3,tanh,adam,"[3, 3, 3]",1
+100,32,0.3,tanh,adam,"[3, 3, 3]",1
+100,64,0.3,tanh,adam,"[3, 3, 3]",1
+100,128,0.3,tanh,adam,"[3, 3, 3]",1
+100,256,0.3,tanh,adam,"[3, 3, 3]",1
+100,8,0.0001,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.0001,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.0001,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.0001,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.0001,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.0001,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.0003,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.0003,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.0003,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.0003,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.0003,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.0003,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.001,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.001,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.001,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.001,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.001,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.001,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.003,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.003,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.003,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.003,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.003,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.003,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.01,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.01,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.01,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.01,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.01,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.01,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.03,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.03,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.03,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.03,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.03,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.03,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.1,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.1,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.1,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.1,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.1,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.1,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.3,relu,rmsprop,"[3, 3, 3]",1
+100,16,0.3,relu,rmsprop,"[3, 3, 3]",1
+100,32,0.3,relu,rmsprop,"[3, 3, 3]",1
+100,64,0.3,relu,rmsprop,"[3, 3, 3]",1
+100,128,0.3,relu,rmsprop,"[3, 3, 3]",1
+100,256,0.3,relu,rmsprop,"[3, 3, 3]",1
+100,8,0.0001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.0001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.0001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.0001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.0001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.0001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.0003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.0003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.0003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.0003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.0003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.0003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.001,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.003,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.01,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.01,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.01,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.01,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.01,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.01,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.03,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.03,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.03,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.03,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.03,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.03,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.1,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.1,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.1,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.1,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.1,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.1,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.3,sigmoid,rmsprop,"[3, 3, 3]",1
+100,16,0.3,sigmoid,rmsprop,"[3, 3, 3]",1
+100,32,0.3,sigmoid,rmsprop,"[3, 3, 3]",1
+100,64,0.3,sigmoid,rmsprop,"[3, 3, 3]",1
+100,128,0.3,sigmoid,rmsprop,"[3, 3, 3]",1
+100,256,0.3,sigmoid,rmsprop,"[3, 3, 3]",1
+100,8,0.0001,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.0001,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.0001,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.0001,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.0001,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.0001,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.0003,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.0003,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.0003,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.0003,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.0003,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.0003,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.001,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.001,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.001,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.001,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.001,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.001,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.003,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.003,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.003,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.003,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.003,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.003,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.01,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.01,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.01,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.01,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.01,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.01,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.03,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.03,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.03,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.03,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.03,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.03,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.1,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.1,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.1,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.1,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.1,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.1,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.3,tanh,rmsprop,"[3, 3, 3]",1
+100,16,0.3,tanh,rmsprop,"[3, 3, 3]",1
+100,32,0.3,tanh,rmsprop,"[3, 3, 3]",1
+100,64,0.3,tanh,rmsprop,"[3, 3, 3]",1
+100,128,0.3,tanh,rmsprop,"[3, 3, 3]",1
+100,256,0.3,tanh,rmsprop,"[3, 3, 3]",1
+100,8,0.0001,relu,adagrad,"[3, 3, 3]",1
+100,16,0.0001,relu,adagrad,"[3, 3, 3]",1
+100,32,0.0001,relu,adagrad,"[3, 3, 3]",1
+100,64,0.0001,relu,adagrad,"[3, 3, 3]",1
+100,128,0.0001,relu,adagrad,"[3, 3, 3]",1
+100,256,0.0001,relu,adagrad,"[3, 3, 3]",1
+100,8,0.0003,relu,adagrad,"[3, 3, 3]",1
+100,16,0.0003,relu,adagrad,"[3, 3, 3]",1
+100,32,0.0003,relu,adagrad,"[3, 3, 3]",1
+100,64,0.0003,relu,adagrad,"[3, 3, 3]",1
+100,128,0.0003,relu,adagrad,"[3, 3, 3]",1
+100,256,0.0003,relu,adagrad,"[3, 3, 3]",1
+100,8,0.001,relu,adagrad,"[3, 3, 3]",1
+100,16,0.001,relu,adagrad,"[3, 3, 3]",1
+100,32,0.001,relu,adagrad,"[3, 3, 3]",1
+100,64,0.001,relu,adagrad,"[3, 3, 3]",1
+100,128,0.001,relu,adagrad,"[3, 3, 3]",1
+100,256,0.001,relu,adagrad,"[3, 3, 3]",1
+100,8,0.003,relu,adagrad,"[3, 3, 3]",1
+100,16,0.003,relu,adagrad,"[3, 3, 3]",1
+100,32,0.003,relu,adagrad,"[3, 3, 3]",1
+100,64,0.003,relu,adagrad,"[3, 3, 3]",1
+100,128,0.003,relu,adagrad,"[3, 3, 3]",1
+100,256,0.003,relu,adagrad,"[3, 3, 3]",1
+100,8,0.01,relu,adagrad,"[3, 3, 3]",1
+100,16,0.01,relu,adagrad,"[3, 3, 3]",1
+100,32,0.01,relu,adagrad,"[3, 3, 3]",1
+100,64,0.01,relu,adagrad,"[3, 3, 3]",1
+100,128,0.01,relu,adagrad,"[3, 3, 3]",1
+100,256,0.01,relu,adagrad,"[3, 3, 3]",1
+100,8,0.03,relu,adagrad,"[3, 3, 3]",1
+100,16,0.03,relu,adagrad,"[3, 3, 3]",1
+100,32,0.03,relu,adagrad,"[3, 3, 3]",1
+100,64,0.03,relu,adagrad,"[3, 3, 3]",1
+100,128,0.03,relu,adagrad,"[3, 3, 3]",1
+100,256,0.03,relu,adagrad,"[3, 3, 3]",1
+100,8,0.1,relu,adagrad,"[3, 3, 3]",1
+100,16,0.1,relu,adagrad,"[3, 3, 3]",1
+100,32,0.1,relu,adagrad,"[3, 3, 3]",1
+100,64,0.1,relu,adagrad,"[3, 3, 3]",1
+100,128,0.1,relu,adagrad,"[3, 3, 3]",1
+100,256,0.1,relu,adagrad,"[3, 3, 3]",1
+100,8,0.3,relu,adagrad,"[3, 3, 3]",1
+100,16,0.3,relu,adagrad,"[3, 3, 3]",1
+100,32,0.3,relu,adagrad,"[3, 3, 3]",1
+100,64,0.3,relu,adagrad,"[3, 3, 3]",1
+100,128,0.3,relu,adagrad,"[3, 3, 3]",1
+100,256,0.3,relu,adagrad,"[3, 3, 3]",1
+100,8,0.0001,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.0001,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.0001,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.0001,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.0001,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.0001,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.0003,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.0003,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.0003,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.0003,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.0003,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.0003,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.001,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.001,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.001,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.001,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.001,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.001,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.003,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.003,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.003,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.003,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.003,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.003,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.01,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.01,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.01,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.01,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.01,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.01,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.03,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.03,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.03,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.03,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.03,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.03,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.1,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.1,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.1,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.1,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.1,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.1,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.3,sigmoid,adagrad,"[3, 3, 3]",1
+100,16,0.3,sigmoid,adagrad,"[3, 3, 3]",1
+100,32,0.3,sigmoid,adagrad,"[3, 3, 3]",1
+100,64,0.3,sigmoid,adagrad,"[3, 3, 3]",1
+100,128,0.3,sigmoid,adagrad,"[3, 3, 3]",1
+100,256,0.3,sigmoid,adagrad,"[3, 3, 3]",1
+100,8,0.0001,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.0001,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.0001,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.0001,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.0001,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.0001,tanh,adagrad,"[3, 3, 3]",1
+100,8,0.0003,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.0003,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.0003,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.0003,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.0003,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.0003,tanh,adagrad,"[3, 3, 3]",1
+100,8,0.001,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.001,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.001,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.001,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.001,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.001,tanh,adagrad,"[3, 3, 3]",1
+100,8,0.003,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.003,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.003,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.003,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.003,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.003,tanh,adagrad,"[3, 3, 3]",1
+100,8,0.01,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.01,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.01,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.01,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.01,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.01,tanh,adagrad,"[3, 3, 3]",1
+100,8,0.03,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.03,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.03,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.03,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.03,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.03,tanh,adagrad,"[3, 3, 3]",1
+100,8,0.1,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.1,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.1,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.1,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.1,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.1,tanh,adagrad,"[3, 3, 3]",1
+100,8,0.3,tanh,adagrad,"[3, 3, 3]",1
+100,16,0.3,tanh,adagrad,"[3, 3, 3]",1
+100,32,0.3,tanh,adagrad,"[3, 3, 3]",1
+100,64,0.3,tanh,adagrad,"[3, 3, 3]",1
+100,128,0.3,tanh,adagrad,"[3, 3, 3]",1
+100,256,0.3,tanh,adagrad,"[3, 3, 3]",1
