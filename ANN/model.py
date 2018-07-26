@@ -1,19 +1,22 @@
 import tensorflow as tf 
 import numpy as np 
+import matplotlib.pyplot as plt
 
 class Model(object):
-    def __init__(self, sess, config):# full config
+    def __init__(self, sess, config):#, config):# full config
         self.sess = sess
         self.config(config)
         self.build_model()
         
         
-    def config(self, config):
+    def config(self, config=None):
         sliding = config['sliding']
         
+        self.learning_rate = config['learning_rate']
         
-        self.input_shape_x = [sliding]
-        self.input_shape_y = [1]
+        
+        self.input_dim = [sliding]
+        self.output_dim = [1]
         
         self.epochs = config['epochs']
         
@@ -29,28 +32,35 @@ class Model(object):
         
         self.optimizer = config['optimizer']
         if self.optimizer == 'adam':
-            self.optimizer = tf.train.AdamOptimizer
+            self.optimizer = tf.train.AdamOptimizer()
         elif self.optimizer == 'adagrad':
-            self.optimizer = tf.train.AdagradOptimizer
+            self.optimizer = tf.train.AdagradOptimizer(self.learning_rate)
         elif self.optimizer == 'gd':
-            self.optimizer = tf.train.GradientDescentOptimizer
+            self.optimizer = tf.train.GradientDescentOptimizer(self.learning_rate)
         elif self.optimizer == 'rmsprop':
-            self.optimizer = tf.train.RMSPropOptimizer
+            self.optimizer = tf.train.RMSPropOptimizer(self.learning_rate)
         elif self.optimizer == 'momentum':
-            self.optimizer = tf.train.MomentumOptimizer
+            self.optimizer = tf.train.MomentumOptimizer(self.learning_rate)
         
         
         
         self.hidden_layers = config['layers']
         
-        self.learning_rate = config['learning_rate']
         
         
+#        self.input_dim = [2]
+#        self.output_dim = [1]
+#        self.batch_size = 8
+#        self.epochs =  100
+#        self.hidden_layers = [2, 2]
+#        self.activation = tf.nn.relu
+#        self.optimizer = tf.train.AdamOptimizer
+#        
 
         
     def build_model(self):
-        self.x = tf.placeholder(dtype=tf.float32, shape=[None] + self.input_shape_x, name='x')
-        self.y = tf.placeholder(dtype=tf.float32, shape=[None] + self.input_shape_y, name='y')
+        self.x = tf.placeholder(dtype=tf.float32, shape=[None] + self.input_dim, name='x')
+        self.y = tf.placeholder(dtype=tf.float32, shape=[None] + self.output_dim, name='y')
         
         prev_layer = layer = None
         for i, num_units in enumerate(self.hidden_layers):
@@ -61,10 +71,12 @@ class Model(object):
             prev_layer = layer
         self.pred = tf.layers.dense(inputs=prev_layer, units=1, name='output_layer')
         
-        self.loss = tf.losses.mean_squared_error(labels=self.y, predictions=self.pred)
-#        self.loss = tf.reduce_mean(tf.square(0.5*(self.pred - self.y) ** 2))
-        tf.summary.scalar("loss", self.loss)
-        self.optimize = self.optimizer(learning_rate=self.learning_rate).minimize(self.loss)
+        with tf.variable_scope('loss'):        
+            self.loss = tf.losses.mean_squared_error(labels=self.y, predictions=self.pred)
+    #        self.loss = tf.reduce_mean(tf.square(0.5*(self.pred - self.y) ** 2))
+#            self.loss = tf.reduce_mean(tf.square(tf.subtract(self.pred, self.y)))
+            tf.summary.scalar("loss", self.loss)
+            self.optimize = self.optimizer.minimize(self.loss)
         
         
     
@@ -72,42 +84,21 @@ class Model(object):
         return self.sess.run([self.pred], feed_dict={self.x:inputs})
     
     
-    def train_model(self, x, y, x_val=None, y_val=None, verbose=1):
-        if x_val is not None and y_val is not None:
-            num_patchs_val = int(np.ceil(len(x_val)/self.batch_size))
-            
-            
-        num_patchs_train = int(np.ceil(len(x)/self.batch_size))
+    def fit(self, x, y, x_val=None, y_val=None, verbose=1):
         
         loss_vals = []
         loss_trains = []
         
         for epoch in range(self.epochs):
             # training process
-            loss_train = []
-            for i in range(num_patchs_train):
-                x_ = x[i*self.batch_size:(i+1)*self.batch_size]
-                y_ = y[i*self.batch_size:(i+1)*self.batch_size]
-                
-                loss_, optimizer = self.sess.run([self.loss, self.optimize], feed_dict={self.x:x_, self.y:y_})
-                loss_train.append(loss_)
-                
-            loss_train = np.mean(loss_train)
+            loss_train = self.train(x, y)
             loss_trains.append(loss_train)
             
             
             # validating process
             if x_val is not None and y_val is not None:
-                loss_val = []
-                for j in range(num_patchs_val):
-                    x_ = x_val[j*self.batch_size:(j+1)*self.batch_size]
-                    y_ = y_val[j*self.batch_size:(j+1)*self.batch_size]
-                    
-                    loss_ = self.sess.run([self.loss], feed_dict={self.x:x_, self.y:y_})
-                    loss_val.append(loss_)
-                    
-                loss_val = np.mean(loss_val)
-                loss_vals.append(loss_val)
+               loss_val = self.evaluate(x_val, y_val)
+               loss_vals.append(loss_val)
             
             if verbose == 1:
                 if x_val is not None and y_val is not None:
@@ -115,9 +106,68 @@ class Model(object):
                 else:
                     print('Epoch #', epoch, 'training loss:', loss_train)
             
-        epochs = list(range(self.epochs))
-        return epochs, loss_trains, loss_vals
+        return loss_trains, loss_vals
     
-
-
-
+    
+    def train(self, x, y):
+        num_batchs = int(np.ceil(len(x)/self.batch_size))
+        losses = []      
+        for i in range(num_batchs):
+            
+            x_batch = x[i * self.batch_size : (i+1) * self.batch_size]
+            y_batch = y[i * self.batch_size : (i+1) * self.batch_size]
+            
+            loss = self.train_step(x_batch, y_batch)
+            losses.append(loss)
+            
+        return np.mean(losses)
+    
+    def train_step(self, x, y):
+        feed_dict = {self.x:x, self.y:y}
+        loss, _ = self.sess.run([self.loss, self.optimize], feed_dict=feed_dict)
+        return loss
+    
+    
+    def evaluate(self, x, y):
+        num_batchs = int(np.ceil(len(x)/self.batch_size))
+        losses = []      
+        for i in range(num_batchs):
+            
+            x_batch = x[i * self.batch_size : (i+1) * self.batch_size]
+            y_batch = y[i * self.batch_size : (i+1) * self.batch_size]
+            
+            loss = self.evaluate_step(x_batch, y_batch)
+            losses.append(loss)
+            
+        return np.mean(losses)
+    
+    def evaluate_step(self, x, y):
+        feed_dict = {self.x:x, self.y:y}
+        loss = self.sess.run([self.loss], feed_dict=feed_dict)
+        return loss
+        
+    
+        
+def test():
+    x = list(range(1, 101, 1))
+    x = np.reshape(x, [-1, 2])
+    y = list(range(1, 51, 1))
+    y = np.reshape(y, [-1, 1])
+    
+    tf.reset_default_graph()
+    sess = tf.Session()
+    
+    model = Model(sess)
+    sess.run(tf.global_variables_initializer())
+    loss_train, loss_val = model.fit(x, y)
+    epochs = range(len(loss_train))
+    
+    plt.plot(epochs, loss_train, label='loss train')
+    if len(loss_val) == len(epochs):
+        plt.plot(epochs, loss_val, label='loss validation')
+    plt.xlabel('epoch')
+    plt.ylabel('loss')
+    plt.show()
+    
+    
+    sess.close()

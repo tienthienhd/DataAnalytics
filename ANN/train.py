@@ -16,15 +16,15 @@ from data import Data
 
 def generate_x_y(data, n_in=1, n_out=1):
     x = data.iloc[:, 0:n_in].values
-    x = np.reshape(x, [-1, n_in])
+    x = np.reshape(x, [len(x), n_in])
     y = data.iloc[:, n_in:].values
-    y = np.reshape(x, [-1, n_out])
+    y = np.reshape(y, [len(y), n_out])
     return x, y
 
 def write_log(log, test, filename):
     with open('./log/result/train/'+filename, 'w+') as f:
         df_log = pd.DataFrame(log)
-        df_log.to_csv(f)
+        df_log.to_csv(f, index=None)
     with open('./log/result/test/'+filename, 'w+') as f:
         f.write('prediction,actual\n')
         for pred, actual in zip(test['prediction'], test['actual']):
@@ -33,7 +33,16 @@ def write_log(log, test, filename):
     with open('./log/result/test/loss_test.csv', 'a+') as f:
         f.write('%f\n' % test['loss_test'])
         
-
+def plot_loss(loss_train, loss_val):
+    epochs = range(len(loss_train))
+    plt.plot(epochs, loss_train, label='training loss')
+    if loss_val and len(loss_val) == len(epochs):
+        plt.plot(epochs, loss_val, label='validation loss')
+    
+    plt.xlabel('epoch')
+    plt.ylabel('loss')
+    plt.legend()
+    plt.show()
 
 #tf.reset_default_graph()
 #sess = tf.Session()
@@ -90,6 +99,7 @@ for i in range(num_combinations):
     conf = config.next_config()
     
     supervised_data = data.series_to_supervised(normalized, n_in=conf['sliding'])
+
     train, val, test = data.split_data(supervised_data)
     
     
@@ -106,29 +116,22 @@ for i in range(num_combinations):
 #    writer = tf.summary.FileWriter('./log/', sess.graph)
 #    break
     
-    epochs, loss_train, loss_val = model.train_model(x_train, y_train, x_val, y_val, verbose=0)
+    loss_train, loss_val = model.fit(x_train, y_train, x_val, y_val, verbose=0)
     
     y_pred = model.predict(x_test)
     y_pred = data.denormalize_data(y_pred[0], 'meanCPUUsage')
     
-    loss_test = np.mean(np.abs(y_pred - y_test))
+    loss_test = np.sqrt(np.mean(np.square(np.subtract(y_pred, y_test)))) #np.mean(np.abs(y_pred - y_test))
     
     test = {'prediction': y_pred, 'actual': y_test, 'loss_test': loss_test}
     
     
-    log = {'epoch': epochs, 'loss_train': loss_train, 'loss_val':loss_val}
+    log = {'loss_train': loss_train, 'loss_val':loss_val}
     write_log(log, test, 'config_{}.csv'.format(i))
     
     print('complete with config:', conf)
     
-#    plt.plot(epochs, loss_train, label='training loss')
-#    if len(loss_val) == len(epochs):
-#        plt.plot(epochs, loss_val, label='validation loss')
-#    
-#    plt.xlabel('epoch')
-#    plt.ylabel('loss')
-#    plt.legend()
-#    plt.show()
+#    plot_loss(loss_train, loss_val)
     
     sess.close()
 #    break

@@ -40,11 +40,13 @@ class Data(object):
         return result
             
     
-    def split_data(self, data, val_size=0.2, test_size=0.2):
+    def split_data(self, data, val_size=0.2, test_size=0.2):   
         ntest = int(round(len(data) * (1 - test_size)))
         nval = int(round(len(data.iloc[:ntest]) * (1 - val_size)))
      
-        df_train, df_val, df_test = data.iloc[:nval], data.iloc[nval:ntest], data.iloc[ntest:]
+        df_train = data.iloc[:nval]
+        df_val = data.iloc[nval:ntest]
+        df_test = data.iloc[ntest:]
      
         return df_train, df_val, df_test
     

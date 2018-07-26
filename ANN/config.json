@@ -1,10 +1,9 @@
 {
-	"epochs": [100],
-	"batch_size": [8, 16, 32, 64, 128, 256],
-	"learning_rate":[0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3],
+    "sliding": [1, 2, 3, 4, 5],
+    "layers": [[2, 2], [8, 8], [16, 16, 16]],
+	"epochs": [200, 150, 100, 50],
+	"learning_rate": [0.001, 0.003, 0.01, 0.03],
+	"batch_size": [8, 16, 32, 64],
 	"activation": ["relu", "sigmoid", "tanh"],
-	"optimizer": ["adam", "rmsprop", "adagrad"],
-	"layers": [[8, 8], [2, 2], [3, 3, 3]],
-	"sliding": [1]
-	
+	"optimizer": ["adam", "rmsprop", "adagrad"]
 }

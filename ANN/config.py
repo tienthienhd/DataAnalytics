@@ -7,12 +7,27 @@ Created on Sun Jul 22 20:12:50 2018
 import json
 import pandas as pd
 import numpy as np
+import itertools
 
 class Config(object):
     
     def __init__(self):
         self.index_config = 0
         pass
+    
+    def combination(self, array):
+        b = []
+        if len(array) <= 1:
+            b = array
+        else:
+            b = list(itertools.product(array[0], array[1]))
+            for i in range(2, len(array)):
+                b = list(itertools.product(b, array[i]))
+                for j in range(len(b)):
+                    c = list(b[j][0])
+                    c.append(b[j][1])
+                    b[j] = c
+        return b
     
     def grid(self, arrays):
         # base on numpy.meshgrid()
@@ -21,7 +36,7 @@ class Config(object):
         output = [np.asanyarray(x).reshape(s0[:i] + (-1,) + s0[i + 1:])
                   for i, x in enumerate(arrays)]
         output = np.broadcast_arrays(*output, subok=True)
-        output = np.array(output)
+        output = np.asarray(output)
         output = output.T.reshape(-1, ndim)
         return output
         
@@ -35,15 +50,27 @@ class Config(object):
     def generate_config(self):
         self.columns = self.config_dict.keys()
         tmp = [self.config_dict[key] for key in self.columns]
-        self.body = self.grid(tmp)
-        data = pd.DataFrame(self.body)
-#        print(data.head())
-        data.columns=self.columns
-        data.to_csv('./log/config/config.csv', index=None)
+#        self.body = self.grid(tmp)
+        self.body = self.combination(tmp)
+#        data = pd.DataFrame(self.body)
+##        print(data.head())
+#        data.columns=self.columns
+#        data.to_csv('./log/config/config.csv', index=None)
         return len(self.body)
 #        
     def next_config(self):
         config_array = self.body[self.index_config]
+#        config_ = []
+#        
+#        for item in config_array:
+#            try:
+#               config_.append(int(item)) 
+#            except:
+#                try:
+#                    config_.append(float(item))
+#                except:
+#                    config_.append(item)
+        
         self.index_config += 1
         config = dict(zip(self.columns, config_array))
         return config
@@ -51,10 +78,9 @@ class Config(object):
             
             
             
-#config = config()
+#config = Config()
 #config.get_config_from_json('config.json')
-#config.generate_config()
-#config1 = config.next_config()
-#config2 = config.next_config()
+#num_combinations = config.generate_config()
+#c = config.next_config()
 
 
