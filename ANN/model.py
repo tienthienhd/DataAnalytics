@@ -77,6 +77,7 @@ class Model(object):
 #            self.loss = tf.reduce_mean(tf.square(tf.subtract(self.pred, self.y)))
             tf.summary.scalar("loss", self.loss)
             self.optimize = self.optimizer.minimize(self.loss)
+            
         
         
     
@@ -98,6 +99,10 @@ class Model(object):
             # validating process
             if x_val is not None and y_val is not None:
                loss_val = self.evaluate(x_val, y_val)
+               if len(loss_vals) > 1 and (loss_val - loss_vals[-1]) > 0:
+                   print('Early stop at epoch', epoch)
+                   loss_vals.append(loss_val)
+                   break
                loss_vals.append(loss_val)
             
             if verbose == 1:

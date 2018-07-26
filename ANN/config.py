@@ -52,10 +52,10 @@ class Config(object):
         tmp = [self.config_dict[key] for key in self.columns]
 #        self.body = self.grid(tmp)
         self.body = self.combination(tmp)
-#        data = pd.DataFrame(self.body)
-##        print(data.head())
-#        data.columns=self.columns
-#        data.to_csv('./log/config/config.csv', index=None)
+        data = pd.DataFrame(self.body)
+#        print(data.head())
+        data.columns=self.columns
+        data.to_csv('./log/config/config.csv', index=None)
         return len(self.body)
 #        
     def next_config(self):

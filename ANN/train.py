@@ -92,11 +92,13 @@ normalized = data.normalize_data('meanCPUUsage')
 
 
     
-for i in range(num_combinations):        
+for i in range(num_combinations):      
     tf.reset_default_graph()
     sess = tf.Session()
     
     conf = config.next_config()
+    
+    print('start with config #',i,':', conf)
     
     supervised_data = data.series_to_supervised(normalized, n_in=conf['sliding'])
 
@@ -129,7 +131,7 @@ for i in range(num_combinations):
     log = {'loss_train': loss_train, 'loss_val':loss_val}
     write_log(log, test, 'config_{}.csv'.format(i))
     
-    print('complete with config:', conf)
+    
     
 #    plot_loss(loss_train, loss_val)
     
