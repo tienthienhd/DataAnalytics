@@ -91,13 +91,14 @@ normalized = data.normalize_data('meanCPUUsage')
 #plt.legend()
 #plt.show()
 
-
+config_gpu = tf.ConfigProto()
+config_gpu.gpu_options.allow_growth = True
     
 for i in range(0, num_combinations):    
     start_time = time.time()
     
     tf.reset_default_graph()
-    sess = tf.Session()
+    sess = tf.Session(config=config_gpu)
     
     conf = config.next_config()
     
