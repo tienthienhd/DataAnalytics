@@ -1,0 +1,53 @@
+{
+
+    "model_default":{
+        "batch_size":8,
+        "sliding_encoder":4,
+        "features":["meanCPUUsage"]
+    },
+    
+    "model_tuning":{
+        "batch_size": [8, 16, 32, 64, 128, 256],
+        "sliding_encoder":[1, 2, 3, 4]
+    },
+    
+     "model_default_encoder":{
+        "sliding_decoder": 4,
+        "num_layers": 2,
+        "num_units" : 4,
+        "num_epochs": 100,
+        "keep_prob":0.8
+    },
+    
+    "model_tuning_encoder":{
+        "encoder_num_inputs": [1],
+        "decoder_num_inputs": [1],
+        "num_units": [4],
+        "num_layers": [2],
+        "num_epochs": [1]    
+    },
+    
+    "model_default_mlp":{
+        "num_epochs":20,
+        "hidden_layers": [4, 4],
+        "activation": "relu",
+        "optimizer": "adam"
+    },
+    
+    "model_tuning_mlp":{
+        
+    },
+    
+    "data_config":{
+        "datapath": "../data/10Minutes.csv",
+        "columns_full": ["time_stamp", "numberOfTaskIndex", "numberOfMachineId", 
+             "meanCPUUsage", "canonical_memory_usage", "AssignMem",
+             "unmapped_cache_usage", "page_cache_usage", "max_mem_usage",
+             "mean_diskIO_time", "mean_local_disk_space", "max_cpu_usage",
+             "max_disk_io_time", "cpi", "mai", "sampling_portion",
+             "agg_type", "sampled_cpu_usage"], 
+        "columns_brief": ["meanCPUUsage"]
+        
+    }
+
+}

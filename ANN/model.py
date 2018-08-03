@@ -1,6 +1,7 @@
 import tensorflow as tf 
 import numpy as np 
 import matplotlib.pyplot as plt
+from time import time
 
 class Model(object):
     def __init__(self, sess, config):#, config):# full config
@@ -47,7 +48,6 @@ class Model(object):
         self.hidden_layers = config['layers']
         
         
-        
 #        self.input_dim = [2]
 #        self.output_dim = [1]
 #        self.batch_size = 8
@@ -91,6 +91,7 @@ class Model(object):
         loss_trains = []
         
         for epoch in range(self.epochs):
+            start_time = time()
             # training process
             loss_train = self.train(x, y)
             loss_trains.append(loss_train)
@@ -99,7 +100,7 @@ class Model(object):
             # validating process
             if x_val is not None and y_val is not None:
                loss_val = self.evaluate(x_val, y_val)
-               if len(loss_vals) > 1 and (loss_val - loss_vals[-1]) > 0:
+               if epoch % 5 == 0 and len(loss_vals) > 1 and (loss_val - loss_vals[-1]) > 0.001:
                    print('Early stop at epoch', epoch)
                    loss_vals.append(loss_val)
                    break
@@ -107,7 +108,7 @@ class Model(object):
             
             if verbose == 1:
                 if x_val is not None and y_val is not None:
-                    print('Epoch #', epoch, 'training loss:', loss_train, ' ; validation loss:', loss_vals[-1])
+                    print('Epoch #', epoch, 'time:', (time()-start_time), 'training loss:', loss_train, ' ; validation loss:', loss_vals[-1])
                 else:
                     print('Epoch #', epoch, 'training loss:', loss_train)
             

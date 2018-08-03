@@ -92,7 +92,7 @@ normalized = data.normalize_data('meanCPUUsage')
 
 
     
-for i in range(num_combinations):      
+for i in range(0, num_combinations):      
     tf.reset_default_graph()
     sess = tf.Session()
     
@@ -140,3 +140,5 @@ for i in range(num_combinations):
 
 #write = tf.summary.FileWriter('./log', sess.graph)
 #sess.close()
+
+

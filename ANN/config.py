@@ -58,7 +58,13 @@ class Config(object):
         data.to_csv('./log/config/config.csv', index=None)
         return len(self.body)
 #        
-    def next_config(self):
+    def next_config(self, index=None):
+        
+        if index is not None:
+            config_array = self.body[index]
+            config = dict(zip(self.columns, config_array))
+            return config
+        
         config_array = self.body[self.index_config]
 #        config_ = []
 #        
