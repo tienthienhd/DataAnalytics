@@ -12,6 +12,7 @@ import os
 from config import Config
 from model import Model
 from data import Data
+import time
 
 
 def generate_x_y(data, n_in=1, n_out=1):
@@ -92,7 +93,9 @@ normalized = data.normalize_data('meanCPUUsage')
 
 
     
-for i in range(0, num_combinations):      
+for i in range(0, num_combinations):    
+    start_time = time.time()
+    
     tf.reset_default_graph()
     sess = tf.Session()
     
@@ -137,7 +140,8 @@ for i in range(0, num_combinations):
     
     sess.close()
 #    break
-
+    interval_time = time.time() - start_time
+    print("Finished after: %fs" % interval_time)
 #write = tf.summary.FileWriter('./log', sess.graph)
 #sess.close()
 
