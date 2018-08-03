@@ -100,11 +100,11 @@ class Model(object):
             # validating process
             if x_val is not None and y_val is not None:
                loss_val = self.evaluate(x_val, y_val)
-               if epoch % 5 == 0 and len(loss_vals) > 1 and (loss_val - loss_vals[-1]) > 0.001:
-                   print('Early stop at epoch', epoch)
-                   loss_vals.append(loss_val)
-                   break
                loss_vals.append(loss_val)
+#               if epoch % 5 == 0 and len(loss_vals) > 1 and (loss_val - loss_vals[-1]) > 0.001:
+#                   print('Early stop at epoch', epoch)
+#                   break
+               
             
             if verbose == 1:
                 if x_val is not None and y_val is not None:
