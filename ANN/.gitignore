@@ -3,7 +3,3 @@ result.py
 test.json
 .ipynb_checkpoints
 __pycache__
-log/result/test/*
-log/result/train/*
-!log/result/test/ .gitkeep
-!log/result/train/ .gitkeep
