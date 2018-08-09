@@ -25,12 +25,13 @@ class Config(object):
             self.model_tuning = config_dict['model_default']
             
             self.model_default_encoder = config_dict['model_default_encoder']
-            self.model_tuning_encoder = config_dict['model_tuning_encoder']
+            #self.model_tuning_encoder = config_dict['model_tuning_encoder']
             
             self.data_config = config_dict['data_config']
             
             self.model_default_mlp = config_dict['model_default_mlp']
-            self.model_tuning_mlp = config_dict['model_tuning_mlp']
+            #self.model_tuning_mlp = config_dict['model_tuning_mlp']
+            return config_dict
             
     def get_data_config(self):
         return self.data_config

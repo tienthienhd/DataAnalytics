@@ -74,5 +74,56 @@ import json
     
 
 
-a = np.zeros((2, 2, 4, 8))
-b = np.amax([1, 2,3])
+#a = np.zeros((2, 2, 4, 8))
+#b = np.amax([1, 2,3])
+
+# Creates a graph.
+#from datetime import datetime
+#
+#device_name = 'cpu'  # Choose device from cmd line. Options: gpu or cpu
+#shape = (7000, 7000)
+#if device_name == "gpu":
+#    device_name = "/gpu:0"
+#else:
+#    device_name = "/cpu:0"
+#    
+#config = tf.ConfigProto(log_device_placement=True)
+#config.gpu_options.allow_growth = True
+#
+#
+#with tf.device(device_name):
+#    random_matrix = tf.random_uniform(shape=shape, minval=0, maxval=1)
+#    dot_operation = tf.matmul(random_matrix, tf.transpose(random_matrix))
+#    sum_operation = tf.reduce_sum(dot_operation)
+#
+#
+#startTime = datetime.now()
+#with tf.Session(config=config) as session:
+#        result = session.run(sum_operation)
+#        print(result)
+#
+## It can be hard to see the results on the terminal with lots of output -- add some newlines to improve readability.
+#print("\n" * 5)
+#print("Shape:", shape, "Device:", device_name)
+#print("Time taken:", datetime.now() - startTime)
+#
+#print("\n" * 5)
+
+
+sess = tf.Session()
+
+
+dataset = tf.data.Dataset.range(100)
+
+dataset = dataset.batch(6)
+dataset = dataset.repeat(4)
+iterator = dataset.make_one_shot_iterator()
+
+next_element = iterator.get_next()
+
+for i in range(100):
+  value = sess.run(next_element)
+  print(value)
+  
+  
+sess.close()  

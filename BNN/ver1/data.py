@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+import tensorflow as tf
 from config import Config
 
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
@@ -86,7 +87,13 @@ class Data(object):
         self.df = pd.DataFrame(tmp)
         
         
+    def denormalize(self, data, feature):
+        min_ = self.min[feature]
+        max_ = self.max[feature]
         
+        tmp = data * (max_ - min_) + min_
+        return tmp
+                
         
         
         
@@ -121,17 +128,85 @@ class Data(object):
         x = np.reshape(x, [x.shape[0], self.num_in[iterator], self.num_features])
         y = batch[:, num_var_x:]
         return x, y
+#    
+#
+##config = Config('config.json')
+##model_config = config.get_model_config()
+##data_config = config.get_data_config()
+##data = Data(data_config)
+##data.series_to_supervised('encoder', model_config['encoder_num_inputs'], model_config['encoder_num_outputs'])
+##data.series_to_supervised('decoder', model_config['decoder_num_inputs'], model_config['decoder_num_outputs'])
+##
+##data.init_iterator('encoder', start_index=0, batch_size=4)
+##data.init_iterator('decoder', start_index=4, batch_size=4)
+##
+##        
+##a = data.next_batch('decoder', 'train')
+        
     
-
-#config = Config('config.json')
-#model_config = config.get_model_config()
-#data_config = config.get_data_config()
-#data = Data(data_config)
-#data.series_to_supervised('encoder', model_config['encoder_num_inputs'], model_config['encoder_num_outputs'])
-#data.series_to_supervised('decoder', model_config['decoder_num_inputs'], model_config['decoder_num_outputs'])
-#
-#data.init_iterator('encoder', start_index=0, batch_size=4)
-#data.init_iterator('decoder', start_index=4, batch_size=4)
-#
+    
+#    
+#class DataSet(object):
+#    def __init__(self, config):
+#        df = pd.read_csv(config['datapath'], header=None, names=config['columns_full'])
+#        self.df = df.loc[:, config['columns_brief']]
 #        
-#a = data.next_batch('decoder', 'train')
+#        
+#        
+##        print(self.data.columns.values)
+#        # get parameter
+##        self.num_samples = self.df.shape[0]
+##        self.num_features = self.df.shape[1]
+#        
+#        # normalize data
+##        self.data.plot()
+#        self.normalize()
+##        self.data.plot()
+#        
+##         set other parameter
+#        self.data = dict()
+##        self.num_in = dict()
+##        self.num_out = dict()
+##        self.iterators = dict()
+##        self.batch_sizes = dict()
+#        pass
+#    
+#    def series_to_supervised(self, dataset, num_in=1, num_out=1):
+##        self.num_in[dataset] = num_in
+##        self.num_out[dataset] = num_out
+#        data = series_to_supervised(self.df, num_in, num_out)
+#        train, val, test = split_data(data)
+#        self.data[dataset] = dict()
+#        self.data[dataset]['train'] = tf.data.Dataset.from_tensor_slices(train)
+#        self.data[dataset]['val'] = tf.data.Dataset.from_tensor_slices(val)
+#        self.data[dataset]['test'] = tf.data.Dataset.from_tensor_slices(test)
+#    
+#    def normalize(self):
+#        self.min = dict()
+#        self.max = dict()
+#        tmp = dict()
+#        for col in self.df.columns.values:
+#            data_col = self.df.loc[:, col].values
+#            self.min[col] = np.amin(data_col)
+#            self.max[col] = np.amax(data_col)
+#            tmp[col] = (data_col - self.min[col]) / (self.max[col] - self.min[col])
+#            
+#        self.df = pd.DataFrame(tmp)
+#    
+#    def denormalize(self, data, feature):
+#        min_ = self.min[feature]
+#        max_ = self.max[feature]
+#        
+#        tmp = data * (max_ - min_) + min_
+#        return tmp
+#    
+#    def make_iterator(self):
+#        pass
+#    
+#    def next_patch(self):
+#        pass
+    
+    
+    
+    
+    

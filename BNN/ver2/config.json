@@ -1,28 +1,5 @@
 {
-
-    "model_default":{
-        "batch_size":8,
-        "sliding_encoder":4,
-        "features":["meanCPUUsage"]
-    },
-    
-    "model_default_encoder":{
-        "sliding_decoder": 4,
-        "num_layers": 2,
-        "num_units" : 32,
-        "num_epochs": 10,
-        "keep_prob":0.8
-    },
-    
-    "model_default_mlp":{
-        "num_epochs":10,
-        "hidden_layers": [4, 4],
-        "activation": "relu",
-        "optimizer": "adam"
-    },
-    
-    
-    "data_config":{
+    "data":{
         "datapath": "../data/10Minutes.csv",
         "columns_full": ["time_stamp", "numberOfTaskIndex", "numberOfMachineId", 
              "meanCPUUsage", "canonical_memory_usage", "AssignMem",
@@ -31,7 +8,18 @@
              "max_disk_io_time", "cpi", "mai", "sampling_portion",
              "agg_type", "sampled_cpu_usage"], 
         "columns_brief": ["meanCPUUsage"]
-        
+    },
+    
+    "encoder_decoder": {
+        "encoder_sliding": 8,
+        "num_features": 1,
+        "decoder_sliding": 6,
+        "batch_size": 16,
+        "num_epochs": 1,
+        "num_layers": 2,
+        "num_units": 32,
+        "keep_prob": 0.8
     }
+
 
 }

@@ -2,10 +2,12 @@ import tensorflow as tf
 import numpy as np 
 import pandas as pd
 import math
+from datetime import datetime
 import pickle
 import matplotlib.pyplot as plt
 from data import Data
 from config import Config
+from tensorflow.python.client import timeline
 
 
 def multi_lstm(num_layers, num_units, keep_prob=1):
@@ -86,7 +88,8 @@ class EncoderDecoder(object):
                                                                inputs=self.decoder_x,
                                                                initial_state=self.encoder_state)
             
-            self.pred_decoder = tf.layers.dense(inputs=decoder_outputs[:, :, -1], units=1, name='dense_output')                
+            self.pred_decoder = tf.layers.dense(inputs=decoder_outputs[:, :, -1], units=1, name='dense_output')      
+            self.pred_decoder = tf.identity(self.pred_decoder, 'decoder_pred')
             
     
     def train_model(self, data):
@@ -173,12 +176,59 @@ class EncoderDecoder(object):
             with open('./log/model/state.pkl', 'wb') as f:
                 pickle.dump(self._current_state, f)
             
+            # loss test
+            
             
             plot_loss(train_losses, val_losses) 
+            
+            
+            
+            
+            
             
    
             
             
+                                
+    def evaluate(self, data):
+        
+        data.init_iterator('encoder', start_index=0, batch_size=self.batch_size)
+        data.init_iterator('decoder', start_index=4, batch_size=self.batch_size)
+         # load encoder_decoder model in default graph
+        encoder_saver = tf.train.import_meta_graph('./log/model/encoder_decoder.ckpt.meta')
+        
+        encoder_graph = tf.get_default_graph()
+        
+        encoder_inputs = encoder_graph.get_tensor_by_name('encoder_x:0')
+        decoder_inputs = encoder_graph.get_tensor_by_name('decoder_x:0')
+        decoder_outputs = encoder_graph.get_tensor_by_name('decoder_y:0')
+        initial_state_encoder = encoder_graph.get_tensor_by_name('init_state:0')
+        pred_decoder = encoder_graph.get_tensor_by_name('decoder/decoder_pred:0')
+        
+        data.reset_iterator('encoder')
+        data.reset_iterator('decoder')
+        encoder_x_batch, encoder_y_batch = data.next_batch('encoder', 'test')
+        decoder_x_batch, decoder_y_batch = data.next_batch('decoder', 'test')
+        
+        init_state = None
+        with open('./log/model/state.pkl', 'rb') as f:
+            init_state = pickle.load(f) 
+#        print(self.encoder_last_outputs)
+        with tf.Session() as sess:
+            encoder_saver.restore(sess, './log/model/encoder_decoder.ckpt')
+            feed_dict = {encoder_inputs:encoder_x_batch,
+                         decoder_inputs:decoder_x_batch,
+                         decoder_outputs:decoder_y_batch,
+                         initial_state_encoder:init_state}
+            
+            pred = sess.run(pred_decoder, feed_dict=feed_dict)
+            
+            pred_ = data.denormalize(pred, 'meanCPUUsage')
+            actual = data.denormalize(decoder_y_batch, 'meanCPUUsage')
+            
+            loss_ = tf.reduce_mean(tf.squared_difference(pred_, actual))
+            print('loss test = ', loss_.eval())
+                       
             
             
             
@@ -190,60 +240,13 @@ data = Data(data_config)
 data.series_to_supervised('encoder', model_config['model_default']['sliding_encoder'], 0)
 data.series_to_supervised('decoder', model_config['model_default_encoder']['sliding_decoder'], 1)
 
-model = EncoderDecoder(model_config)
-model.train_model(data)
 
-#data_config = config.get_data_config()
-#
-#data = Data(data_config)
-#data.series_to_supervised('encoder', model_config['encoder_num_inputs'], model_config['encoder_num_outputs'])
-#data.series_to_supervised('decoder', model_config['decoder_num_inputs'], model_config['decoder_num_outputs'])
-#
-#
-#model = EncoderDecoder(model_config, data)            
-#            
-##model.train_model(data)
-#
-#
-#
-#
-#tf.reset_default_graph()
-#
-#
-#
-#with tf.Session() as sess:
-##    model.restore_model(sess)
-#    encoder_saver = tf.train.import_meta_graph('./log/model/encoder_decoder.ckpt.meta')
-#
-#    graph = tf.get_default_graph()
-#    
-#    inputs = graph.get_tensor_by_name('encoder_x:0')
-#    outputs_encoder = graph.get_tensor_by_name('encoder/encoder_outputs:0')
-#    initial_state = graph.get_tensor_by_name('init_state:0')
-#    
-#    output_encoder_sg = tf.stop_gradient(outputs_encoder)
-#    
-#    output_encoder_last = output_encoder_sg[:, -1, :]
-#    print(output_encoder_last)
-#    
-#    encoder_saver.restore(sess, './log/model/encoder_decoder.ckpt')
-#    init_state = None
-#    with open('./log/model/state.pkl', 'rb') as f:
-#        init_state = pickle.load(f)
-#    
-#    
-#    layer1 = tf.layers.dense(inputs=output_encoder_last, units=8, name='layer1', activation=tf.nn.relu)
-#    layer2 = tf.layers.dense(inputs=layer1, units=4, name='layer2', activation=tf.nn.relu)
-#    layer3 = tf.layers.dense(inputs=layer2, units=4, name='layer3', activation=tf.nn.relu)
-#    outputs = tf.layers.dense(inputs=layer3, units=1, name='output')
-#    
-#    sess.run(tf.global_variables_initializer())
-#    
-#    data.init_iterator('encoder', batch_size=16)
-#    inputs_batch = data.next_batch('encoder', 'test')[0]
-##    output_encoder = model.encode(sess, inputs)
-#    
-#    output = sess.run(outputs, feed_dict={inputs:inputs_batch, initial_state:init_state})
-#    
-#    print(output)
+model = EncoderDecoder(model_config)
+
+#startTime = datetime.now()
+#model.train_model(data)
+#print('time training:', datetime.now() - startTime)
+model.evaluate(data)
+
+
 #            

@@ -45,9 +45,7 @@ class EncoderDecoder(object):
         
         # input for model
         self.encoder_x = tf.placeholder(dtype=tf.float32, shape=[None, self.encoder_num_inputs, self.num_features], name='encoder_x') # (batch_size, sequence_length, num_feature)
-        
         self.decoder_x = tf.placeholder(dtype=tf.float32, shape=[None, self.decoder_num_inputs, self.num_features], name='decoder_x')
-        
         self.decoder_y = tf.placeholder(dtype=tf.float32, shape=[None, self.decoder_num_outputs], name='decoder_y')
         
         self.init_state = tf.placeholder(dtype=tf.float32, shape=[self.num_layers, 2, self.batch_size, self.num_units], name='init_state')
