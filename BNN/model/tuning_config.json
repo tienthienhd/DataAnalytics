@@ -1,0 +1,36 @@
+{
+    "data": {
+        "data_directory": ["../data/"],
+        "data_name": ["data_resource_usage_3Minutes_6176858948", 
+                      "data_resource_usage_5Minutes_6176858948", 
+                      "data_resource_usage_8Minutes_6176858948",
+                      "data_resource_usage_10Minutes_6176858948"],
+        "columns_full": [["time_stamp", "numberOfTaskIndex", "numberOfMachineId", 
+             "meanCPUUsage", "canonical_memory_usage", "AssignMem",
+             "unmapped_cache_usage", "page_cache_usage", "max_mem_usage",
+             "mean_diskIO_time", "mean_local_disk_space", "max_cpu_usage",
+             "max_disk_io_time", "cpi", "mai", "sampling_portion",
+             "agg_type", "sampled_cpu_usage"]], 
+        "features": [["meanCPUUsage"], 
+                          ["canonical_memory_usage"], 
+                          ["meanCPUUsage", "canonical_memory_usage"]]
+    },
+    
+    "encoder_decoder": {
+        "batch_size":[64, 16, 32, 64],
+        "sliding": [[6, 3], [12, 6], [18, 9]],
+        "layers_units":[[4], [8], [16], [32], [8, 4], [16, 8], [32, 16]],
+        "num_epochs": [1, 2000, 3000],
+        "keep_prob": [0.7, 0.8, 0.9]
+    },
+    
+    "mlp": {
+        "input_dim":[6, 12, 18],
+        "batch_size":[8, 16, 32, 64],
+        "num_epochs":[1000, 2000, 3000],
+        "hidden_layers": [[4], [8], [16], [4, 8], [8, 8]],
+        "activation": ["relu", "sigmoid", "tanh"],
+        "optimizer": ["adam"]
+    }
+
+}

@@ -1,0 +1,36 @@
+{
+    "data": {
+        "data_directory": "../data/",
+        "data_name": "data_resource_usage_10Minutes_6176858948.csv",
+        "columns_full": ["time_stamp", "numberOfTaskIndex", "numberOfMachineId", 
+             "meanCPUUsage", "canonical_memory_usage", "AssignMem",
+             "unmapped_cache_usage", "page_cache_usage", "max_mem_usage",
+             "mean_diskIO_time", "mean_local_disk_space", "max_cpu_usage",
+             "max_disk_io_time", "cpi", "mai", "sampling_portion",
+             "agg_type", "sampled_cpu_usage"], 
+        "features": ["meanCPUUsage"]
+    },
+    
+    
+    "encoder_decoder": {
+        "batch_size": 32,
+        "sliding": [6, 4],
+        "num_layers": 1,
+        "num_units": 16,
+        "layers_units": [16, 8, 4],
+        "num_epochs": 20,
+        "keep_prob": 0.8
+    },
+    
+    "mlp": {
+        "batch_size":32,
+        "input_dim": 6,
+        "num_epochs":20,
+        "hidden_layers": [8, 16, 8, 4],
+        "activation": "relu",
+        "optimizer": "adam"
+    }
+    
+    
+
+}
