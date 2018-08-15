@@ -182,7 +182,7 @@ class EncoderDecoder(object):
         
         saver = tf.train.Saver()
         
-        with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as sess:
+        with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             
 #            writer = tf.summary.FileWriter('./log/graph/', sess.graph)

@@ -9,9 +9,10 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
+import pandas as pd
 
 
-def plot_loss(train_losses, val_losses=None):
+def plot_loss(train_losses, val_losses=None, file_save=None):
     epochs = range(len(train_losses))
     plt.plot(epochs, train_losses, label='train loss')
     if val_losses:
@@ -19,8 +20,9 @@ def plot_loss(train_losses, val_losses=None):
     plt.xlabel('epoch')
     plt.ylabel('loss')
     plt.legend()
+    plt.savefig(file_save)
 #    plt.show()
-    plt.savefig('./log/figure/test.png')
+    plt.clf()
 
 class MLP(object):
     def __init__(self, config=None, max_min=None):
@@ -99,13 +101,13 @@ class MLP(object):
                                     units=1, 
                                     name='output_layer')
         
-        pred_inverse = self.pred * (self.max + self.min) + self.min
-        y_inverse = self.y * (self.max + self.min) + self.min
+        self.pred_inverse = self.pred * (self.max + self.min) + self.min
+        self.y_inverse = self.y * (self.max + self.min) + self.min
         
-        self.MAE = tf.reduce_mean(tf.abs(tf.subtract(pred_inverse, 
-                                                     y_inverse)))
+        self.MAE = tf.reduce_mean(tf.abs(tf.subtract(self.pred_inverse, 
+                                                     self.y_inverse)))
         self.RMSE = tf.sqrt(tf.reduce_mean(tf.square(
-                tf.subtract(pred_inverse, y_inverse))))
+                tf.subtract(self.pred_inverse, self.y_inverse))))
         
         with tf.device('/device:GPU:0'):
             with tf.variable_scope('loss'):        
@@ -116,7 +118,14 @@ class MLP(object):
     #            print(type(self.optimizer))
                 self.optimize = self.optimizer.minimize(self.loss)
 
-    def fit(self, train, val=None, test=None):
+    def fit(self, train, val=None, test=None, folder_result=None, config_name=None):
+        
+        if folder_result and config_name:
+            history_file = folder_result + config_name + '_history.png'
+            error_file = folder_result + config_name + '_error.csv'
+            predict_file = folder_result + config_name + '_predict.csv'
+#            model_file = folder_result + config_name + '_model_mlp.ckpt'
+            mae_rmse_file = folder_result + 'mae_rmse_log.csv'
         
         train_losses = []
         val_losses = []
@@ -137,12 +146,17 @@ class MLP(object):
                     break
             
         if val:
-            plot_loss(train_losses, val_losses)          
+            # log result
+            if folder_result and config_name:
+                log = {'train': train_losses, 'val': val_losses}
+                df_log = pd.DataFrame(log)
+                df_log.to_csv(error_file, index=None)
+            plot_loss(train_losses, val_losses, history_file)          
         else:
             plot_loss(train_losses)
             
         if test:                    
-            self.test(test)
+            self.test(test, predict_file, mae_rmse_file)
         
     
     def train(self, data):
@@ -201,7 +215,7 @@ class MLP(object):
         avg_loss = total_loss / num_batches
         return avg_loss
     
-    def test(self, data):
+    def test(self, data, log_file=None, log_mae_rmse=None):
         x = data[0]
         y = data[1]
         
@@ -209,6 +223,9 @@ class MLP(object):
         rmse = []
         num_batches = 0
         total_loss = 0.0
+        
+        predict = []
+        actual = []
         
         try:
             while True:
@@ -218,7 +235,11 @@ class MLP(object):
                 y_ = y[num_batches * self.batch_size : 
                     (num_batches + 1) * self.batch_size]
                     
-                _mae, _rmse, _loss = self.sess.run([self.MAE, self.RMSE, self.loss], 
+                pred_inv, y_inv,_mae, _rmse, _loss = self.sess.run([self.pred_inverse, 
+                                                                    self.y_inverse, 
+                                                                    self.MAE, 
+                                                                    self.RMSE, 
+                                                                    self.loss], 
                                        feed_dict={
                                             self.x: x_, 
                                             self.y: y_
@@ -229,6 +250,9 @@ class MLP(object):
                 rmse.append(_rmse)
                 total_loss += _loss
                 num_batches += 1
+                
+                predict.extend(pred_inv[:, 0])
+                actual.extend(y_inv[:, 0])
         except tf.errors.InvalidArgumentError:
             pass
         mae = np.mean(mae)
@@ -236,7 +260,13 @@ class MLP(object):
         avg_loss = total_loss / num_batches
         print('loss: %.7f  mae: %.7f  rmse: %.7f' % (avg_loss, mae, rmse))
          
-    
+        with open(log_mae_rmse, 'a+') as f:
+            f.write('%f, %f\n' % (mae, rmse))
+            
+        
+        log = {'predict': predict, 'actual': actual}
+        df_log = pd.DataFrame(log)
+        df_log.to_csv(log_file, index=None)
 #mlp = MLP()
 #sess = tf.Session()
 ##mlp.load_encoder(sess)
