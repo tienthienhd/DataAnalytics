@@ -206,12 +206,11 @@ class EncoderDecoder(object):
                     val_losses.append(avg_loss_val)                    
 #                    print('Epoch #%d loss train = %.7f  loss_val = %.7f' % (epoch,
 #                          avg_loss_train, avg_loss_val))
-                else:
+#                else:
 #                    print('Epoch #%d loss train = %.7f' % (epoch,
 #                         avg_loss_train))
 #                print('interval time:', 
 #                      datetime.now()-start_time)
-				    pass
                 
                 if self.early_stop(val_losses, 5):
                     print('finished training at epoch', epoch)
