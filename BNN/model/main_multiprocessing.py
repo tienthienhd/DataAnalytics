@@ -20,7 +20,7 @@ def train_multi_encoder(config, data_config, dataset, dir_result_data, pool):
         os.makedirs(dir_result_encoder)
     
 #    results = []
-    for j in range(2):
+    for j in range(df_config_encoder_decoder.shape[0]):
         
         pool.apply_async(train_encoder, 
                    args=(df_config_encoder_decoder, data_config, 
@@ -75,7 +75,6 @@ def run(pool):
         if is_train_encoder:
             train_multi_encoder(config, data_config, dataset, dir_result_data, pool)
             
-        break
 
 result_list = []
 def log_result(result):
