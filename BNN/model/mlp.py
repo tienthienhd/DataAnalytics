@@ -4,7 +4,8 @@ Created on Sat Aug 11 13:39:46 2018
 
 @author: HP Zbook 15
 """
-
+import matplotlib
+matplotlib.use('Agg')
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt

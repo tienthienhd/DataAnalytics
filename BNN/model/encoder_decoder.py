@@ -4,7 +4,8 @@ Created on Sat Aug 11 08:56:40 2018
 
 @author: HP Zbook 15
 """
-
+import matplotlib
+matplotlib.use('Agg')
 import tensorflow as tf
 from datetime import datetime
 import numpy as np
