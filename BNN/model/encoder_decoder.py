@@ -139,11 +139,11 @@ class EncoderDecoder(object):
             self.RMSE = tf.sqrt(tf.reduce_mean(tf.square(
                     tf.subtract(self.pred_inverse, self.y_inverse))))
     
-        with tf.device('/device:GPU:0'):
-            with tf.name_scope('loss_optimizer'):
-                loss = tf.reduce_mean(tf.squared_difference(pred_decoder, 
-                                                            self.decoder_y))
-                optimizer  = tf.train.AdamOptimizer().minimize(loss)
+#        with tf.device('/device:GPU:0'):
+        with tf.name_scope('loss_optimizer'):
+            loss = tf.reduce_mean(tf.squared_difference(pred_decoder, 
+                                                        self.decoder_y))
+            optimizer  = tf.train.AdamOptimizer().minimize(loss)
             
             
         return encoder_state, pred_decoder, loss, optimizer
