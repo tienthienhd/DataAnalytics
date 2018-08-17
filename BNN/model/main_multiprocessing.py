@@ -84,7 +84,7 @@ def log_result(result):
     
 if __name__ == '__main__':
     
-    num_processes = mp.cpu_count()
+    num_processes = 8 #mp.cpu_count()
     print('start with num_processes=', num_processes)
     pool = mp.Pool(processes=num_processes)
     run(pool)
