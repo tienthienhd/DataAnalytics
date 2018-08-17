@@ -211,6 +211,7 @@ class EncoderDecoder(object):
 #                         avg_loss_train))
 #                print('interval time:', 
 #                      datetime.now()-start_time)
+					pass
                 
                 if self.early_stop(val_losses, 5):
                     print('finished training at epoch', epoch)
