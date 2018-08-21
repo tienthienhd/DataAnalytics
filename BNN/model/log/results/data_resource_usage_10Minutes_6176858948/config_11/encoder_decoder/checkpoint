@@ -1,0 +1,2 @@
+model_checkpoint_path: "config_755_model_encoder_decoder.ckpt"
+all_model_checkpoint_paths: "config_755_model_encoder_decoder.ckpt"
